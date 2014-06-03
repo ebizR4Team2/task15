@@ -1,4 +1,5 @@
 package parser;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -29,7 +30,8 @@ import bean.TestBean;
 
 public class Xml {
 	private Document document;
-	private static String filePath = System.getProperty("user.dir") + "\\form\\";
+	private static String filePath = System.getProperty("user.dir")
+			+ "\\form\\";
 	private FormBeanFactory<TestBean> formBeanFactory = FormBeanFactory
 			.getInstance(TestBean.class);
 
@@ -43,24 +45,30 @@ public class Xml {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	/**
 	 * return xml url on the server for download or zip
-	 * @param form the bean contains the user input information from the UI
-	 * @param fileName the xml's name stored in the server
-	 * @throws Exception name validing exception
+	 * 
+	 * @param form
+	 *            the bean contains the user input information from the UI
+	 * @param fileName
+	 *            the xml's name stored in the server
+	 * @throws Exception
+	 *             name validing exception
 	 */
 	public String createXml(TestBean form, String fileName) throws Exception {
 		if (!fileName.endsWith(".xml")) {
 			throw new Exception("Filename must end with \".xml\"");
 		}
 		Method[] methods = TestBean.class.getMethods();
-		for (Method method: methods) {
-			String id = method.getName().substring(2, 3).toLowerCase() + method.getName().substring(3);	// after "get"
+		for (Method method : methods) {
+			String id = method.getName().substring(2, 3).toLowerCase()
+					+ method.getName().substring(3); // after "get"
 			Element element = this.document.createElement(id);
-			element.appendChild(this.document.createTextNode((String) method.invoke(form)));
+			element.appendChild(this.document.createTextNode((String) method
+					.invoke(form)));
 		}
-		
+
 		// return the path on server for downlaoding
 		// do some convert
 		return filePath + fileName;
@@ -86,7 +94,8 @@ public class Xml {
 			DOMSource source = new DOMSource(document);
 			transformer.setOutputProperty(OutputKeys.ENCODING, "gb2312");
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-			PrintWriter pw = new PrintWriter(new FileOutputStream(filePath + fileName));
+			PrintWriter pw = new PrintWriter(new FileOutputStream(filePath
+					+ fileName));
 			StreamResult result = new StreamResult(pw);
 			transformer.transform(source, result);
 			System.out.println("done generating!");
@@ -131,11 +140,11 @@ public class Xml {
 			System.out.println(e.getMessage());
 		}
 	}
-	
-	public static void main(String args[]){
-        Xml dd=new Xml();
-        String str="grade.xml";
-        dd.createXml(str);    //¥¥Ω®xml
-        dd.parserXml(str);    //∂¡»°xml
-    }
+
+	public static void main(String args[]) {
+		Xml dd = new Xml();
+		String str = "grade.xml";
+		dd.createXml(str);
+		dd.parserXml(str);
+	}
 }
