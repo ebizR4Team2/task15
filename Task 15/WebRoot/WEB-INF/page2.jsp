@@ -5,6 +5,8 @@
 <title>Page 2</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/jumbotron-narrow.css" rel="stylesheet">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
 </head>
 
 <body>
@@ -19,27 +21,41 @@
       <div class="content">
         <form role="form">
           <div class="form-group">
-            <label for="exampleInputEmail1">Is this privacy policy jointly provided by two or more financial instituitions?</label>
+            <label for="exampleInputEmail1">Is this privacy policy jointly provided by two or more financial institutions?</label>
             <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="JointPolicy" id="JointPolicy" value="yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="JointPolicy" id="JointPolicy" value="no">
                     No
                   </label>
                 </div>
           </div>
-          <div class="form-group">
+		  <script>
+			$("input[name='JointPolicy']").change(function(){
+			   
+			if($(this).val()=="yes")
+			{
+				$("#Whoisprovidingthisnotice").show();
+			}
+			else
+			{
+				   $("#Whoisprovidingthisnotice").hide(); 
+			}
+				
+			});
+		</script>
+          <div class="form-group" id="Whoisprovidingthisnotice" style = "display:none;">
             <label for="who">Who is providing this notice?</label>
             <input type="text" class="form-control" id="who" >
           </div>
 		     <div class="form-group">
             <label for="who">How do you protect user's personal information?</label>
-            <input type="text" class="form-control" id="who" >
+            <textarea class="form-control" rows="3"></textarea>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">How do you collect user's personal information?</label>
@@ -253,18 +269,32 @@
             	<label for="exampleInputPassword1">Do you collect information from affiliates and/or credit bureaus?</label>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="AffiliatesandCreditBureaus" id="AffiliatesandCreditBureaus" value="yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="AffiliatesandCreditBureaus" id="AffiliatesandCreditBureaus" value="no">
                     No
                   </label>
                 </div>
             </div>
-			            <div class="form-group">
+			 <script>
+			$("input[name='AffiliatesandCreditBureaus']").change(function(){
+			   
+			if($(this).val()=="yes")
+			{
+				$("#Shareinfowithcompany").hide();
+			}
+			else
+			{
+				   $("#Shareinfowithcompany").show(); 
+			}
+				
+			});
+		</script>
+			            <div class="form-group" id="Shareinfowithcompany" style = "display:none;">
             	<label for="exampleInputPassword1">Do you collect information from companies?</label>
                 <div class="radio">
                   <label>
@@ -313,20 +343,16 @@
                   </label>
                 </div>
           </div>
+          
+          <div class="form-group">
+            <label for="exampleInputEmail1"> Provide information about state laws below</label>
+			<textarea class="form-control" rows="10"></textarea>
+          </div>
+         
             
           </div>
-          
-          <!--
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
-          </div>
-          -->
-          
-          
-          <button type="submit" class="btn btn-default">Save</button>
-          <button type="submit" class="btn btn-default">Save and continue</button>
+          <button type="submit" class="btn btn-default">Finish and download XML</button>
+				
         </form>
       </div>
     </div>

@@ -289,8 +289,8 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>For our everyday business purposes-such as to process
-									your transactions, maintain your account(s), respond to court
+								<td>For everyday business purposes-such as to process
+									customer's transactions, maintain customer's account(s), respond to court
 									orders and legal investigations, or report to credit bureaus</td>
 								<td>
 									<div class="radio">
@@ -348,9 +348,8 @@
 								</td>
 							</tr>
 							<tr>
-								<td>For our marketing purposes-with service providers we
-									use to offer our products and services to you (please see below
-									to limit the ways we contact you)</td>
+								<td>For marketing purposes-with service providers you
+									use to offer your products and services to customer</td>
 								<td>
 									<div class="radio">
 										<label> <input type="radio" name="optionsRadios"
@@ -433,7 +432,7 @@
 							</tr>
 							
 							<tr>
-								<td>For our affiliates' everyday business purposes information about your creditworthiness 
+								<td>For affiliates' everyday business purposes information about your creditworthiness 
 								
 								</td>
 								<td>
@@ -462,9 +461,39 @@
 								</td>
 							</tr>
 							
-							<tr style="display:none">
-								<td>For our affiliates' everyday business purposes information about your creditworthiness 
-								
+							<tr style="display:none" id="sharepersonalinfo">
+								<td  >
+								For our affiliates to market to customer
+								</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios1" value="option1"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios2" value="option2"> No
+										</label>
+									</div>
+								</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios1" value="option1"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios2" value="option2"> No
+										</label>
+									</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+								For nonaffiliates to market to customer 
 								</td>
 								<td>
 									<div class="radio">
@@ -507,19 +536,13 @@
 
 				</div>
 
-				<!--
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
-          </div>
-          -->
 
-
-				<button type="submit" class="btn btn-default">Save</button>
-				<button type="submit" class="btn btn-default">Save and
-					continue</button>
+				<button type="submit" class="btn btn-default">Save and download XML for current step</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				
 			</form>
+			<br>
+			<a href="continue.do"><button class="btn btn-primary">Continue the step</button></a>
 		</div>
 	</div>
 
