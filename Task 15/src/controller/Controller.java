@@ -13,9 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
 public class Controller extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
 
     public void init() throws ServletException {
-
+    	Action.add(new IndexAction());
         //Action.add(new ChangePwdAction());
     }
 
@@ -35,7 +37,7 @@ public class Controller extends HttpServlet {
      * @return the next page (the view)
      */
     private String performTheAction(HttpServletRequest request) {
-        return Action.perform("login.do",request);
+        return Action.perform("index.do",request);
     }
 
     /*
@@ -55,7 +57,7 @@ public class Controller extends HttpServlet {
 			return;
     	}
     	
-    	if (nextPage.endsWith(".jsp")) {
+    	if (nextPage.endsWith(".jsp") || nextPage.endsWith(".html")) {
 	   		RequestDispatcher d = request.getRequestDispatcher("WEB-INF/" + nextPage);
 	   		d.forward(request,response);
 	   		return;
