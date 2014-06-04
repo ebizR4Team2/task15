@@ -37,8 +37,8 @@ public class XmlParser {
 	}
 	
 	private Document document;
-	private static String filePath = System.getProperty("user.dir")
-			+ "\\form\\";
+	private static String filePath = System.getProperty("user.dir") +System.getProperty("file.separator")
+			+"form";
 	private FormBeanFactory<TestBean> formBeanFactory = FormBeanFactory
 			.getInstance(TestBean.class);
 
@@ -63,9 +63,9 @@ public class XmlParser {
 	 * @throws Exception
 	 *             name validing exception
 	 */
-	public String createXml(TestBean form, String fileName) throws Exception {
+	public String importXml(TestBean form, String fileName) throws Exception {
 		if (!fileName.endsWith(".xml")) {
-			throw new Exception("Filename must end with \".xml\"");
+			throw new Exception("Must import xml file");
 		}
 		Method[] methods = TestBean.class.getMethods();
 		for (Method method : methods) {

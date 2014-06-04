@@ -16,6 +16,6 @@ public class IndexAction extends Action {
 	
 	@Override
 	public String perform(HttpServletRequest request) {
-		return "index.html";
+		return "index.jsp";
 	}
 }

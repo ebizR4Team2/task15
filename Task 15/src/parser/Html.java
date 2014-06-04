@@ -13,7 +13,8 @@ public class Html {
 	// http://www.oschina.net/p/jsoup
 	private Document doc;
 	private Elements elements;
-	private static String filePath = System.getProperty("user.dir") + "\\form\\";
+	private static String filePath = System.getProperty("user.dir") +System.getProperty("file.separator")
+			+"form";
 
 	public Html(String fileName) throws IOException {
 		File input = new File( filePath + fileName);
