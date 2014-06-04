@@ -1,11 +1,16 @@
 package parser;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.parsers.DocumentBuilder;
@@ -29,19 +34,33 @@ import org.xml.sax.SAXException;
 import bean.TestBean;
 public class XmlParser {
 
+	private Document document;
+	private static String filePath = System.getProperty("user.dir") + System.getProperty("file.separator")
+			+"form" + System.getProperty("file.separator");
+	
 	public static void main(String args[]) {
 		XmlParser dd = new XmlParser();
-		String str = "grade.xml";
-		dd.createXml(str);
-		dd.parserXml(str);
+		dd.createXml("grade.xml");
+		File file = new File(filePath + "grade.xml");
+		try {
+			HashMap map = dd.importXml(file);
+			Iterator itr = map.entrySet().iterator();
+			while(itr.hasNext()) {
+				Entry entry = (Entry) itr.next();
+				System.out.println(entry.getKey() + ": " + entry.getValue());
+			}
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
-	
-	private Document document;
-	private static String filePath = System.getProperty("user.dir") +System.getProperty("file.separator")
-			+"form";
-	private FormBeanFactory<TestBean> formBeanFactory = FormBeanFactory
-			.getInstance(TestBean.class);
-
 	public XmlParser() {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory
@@ -54,47 +73,85 @@ public class XmlParser {
 	}
 
 	/**
-	 * return xml url on the server for download or zip
-	 * 
-	 * @param form
-	 *            the bean contains the user input information from the UI
-	 * @param fileName
-	 *            the xml's name stored in the server
-	 * @throws Exception
-	 *             name validing exception
+	 * Read a file and parse all the node into a HashMap accroding to the xml node and value pair
+	 * @param file the xml file
+	 * @return HashMap<String, String>
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
 	 */
-	public String importXml(TestBean form, String fileName) throws Exception {
-		if (!fileName.endsWith(".xml")) {
-			throw new Exception("Must import xml file");
+	public HashMap<String, String> importXml(File file) throws ParserConfigurationException, SAXException, IOException {
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document document = db.parse(file);
+		
+		HashMap<String, String> valueMap = new HashMap<String, String>();
+		
+		NodeList nodes = (NodeList) document.getChildNodes();
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Node node = nodes.item(i);
+			NodeList values = node.getChildNodes();
+			// text node is also node, so need to skip one to get the right value
+			for (int j = 1; j < values.getLength(); j++) {
+				valueMap.put(values.item(j).getNodeName(), values.item(j++).getTextContent());
+				//System.out.println(values.item(j).getNodeName() + " : " + values.item(j++).getTextContent());
+			}
 		}
-		Method[] methods = TestBean.class.getMethods();
-		for (Method method : methods) {
-			String id = method.getName().substring(2, 3).toLowerCase()
-					+ method.getName().substring(3); // after "get"
-			Element element = this.document.createElement(id);
-			element.appendChild(this.document.createTextNode((String) method
-					.invoke(form)));
+		return valueMap;
+	}
+	
+	/**
+	 * HAVENT't been tested (6/4/2014 18:56 Fang)
+	 * save xml file into server according to the content of the request and return the path of xml generated in server;
+	 * you need to set the attributes<String, String> in related actions
+	 * @param request contains the value of user entered
+	 * @param fileName the name for the generated xml file
+	 * @return generated xml url
+	 */
+	public String saveXml(HttpServletRequest request, String fileName) {
+		Enumeration<String> ids = request.getAttributeNames();
+		while (ids.hasMoreElements()) {
+			String name = ids.nextElement();
+			Element elm = this.document.createElement(name);
+			elm.appendChild(this.document.createTextNode((String) request.getAttribute(name)));
 		}
-
-		// return the path on server for downlaoding
-		// do some convert
+		TransformerFactory tf = TransformerFactory.newInstance();
+		try {
+			Transformer transformer = tf.newTransformer();
+			DOMSource source = new DOMSource(document);
+			transformer.setOutputProperty(OutputKeys.ENCODING, "gb2312");
+			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+			PrintWriter pw = new PrintWriter(new FileOutputStream(filePath
+					+ fileName));
+			StreamResult result = new StreamResult(pw);
+			transformer.transform(source, result);
+			System.out.println("done generating!");
+		} catch (TransformerConfigurationException e) {
+			System.out.println(e.getMessage());
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (TransformerException e) {
+			System.out.println(e.getMessage());
+		}
 		return filePath + fileName;
 	}
 
+	// example
 	public void createXml(String fileName) {
-		Element root = this.document.createElement("scores");
+		Element root = this.document.createElement("values");
 		this.document.appendChild(root);
-		Element employee = this.document.createElement("employee");
 		Element name = this.document.createElement("name");
 		name.appendChild(this.document.createTextNode("wangchenyang"));
-		employee.appendChild(name);
+		root.appendChild(name);
 		Element sex = this.document.createElement("sex");
 		sex.appendChild(this.document.createTextNode("m"));
-		employee.appendChild(sex);
+		root.appendChild(sex);
 		Element age = this.document.createElement("age");
 		age.appendChild(this.document.createTextNode("26"));
-		employee.appendChild(age);
-		root.appendChild(employee);
+		root.appendChild(age);
+
 		TransformerFactory tf = TransformerFactory.newInstance();
 		try {
 			Transformer transformer = tf.newTransformer();
@@ -117,6 +174,7 @@ public class XmlParser {
 		}
 	}
 
+	// example
 	public void parserXml(String fileName) {
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
