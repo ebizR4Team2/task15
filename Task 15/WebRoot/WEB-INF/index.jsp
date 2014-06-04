@@ -12,8 +12,8 @@
 	<div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="index.html">Build</a></li>
-          <li><a href="import.html">Import</a></li>
+          <li class="active"><a href="index.do">Build</a></li>
+          <li><a href="import.do">Import</a></li>
         </ul>
         <h3 class="text-muted">Interactive Form Builder</h3>
       </div>
