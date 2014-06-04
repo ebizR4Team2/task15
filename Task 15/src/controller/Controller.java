@@ -18,6 +18,7 @@ public class Controller extends HttpServlet {
 
     public void init() throws ServletException {
     	Action.add(new IndexAction());
+    	Action.add(new ImportAction());
         //Action.add(new ChangePwdAction());
     }
 
@@ -37,7 +38,16 @@ public class Controller extends HttpServlet {
      * @return the next page (the view)
      */
     private String performTheAction(HttpServletRequest request) {
-        return Action.perform("index.do",request);
+    	String servletPath = request.getServletPath();
+		String action = getActionName(servletPath);
+
+		if (action.equals("welcome")) {
+			// User is logged in, but at the root of our web app
+			return Action.perform("index.do", request);
+		}
+
+		// Let the logged in user run his chosen action
+		return Action.perform(action, request);
     }
 
     /*
