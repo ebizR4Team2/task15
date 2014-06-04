@@ -5,6 +5,7 @@
 <title>Interactive Form Builder</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/jumbotron-narrow.css" rel="stylesheet">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
 </head>
 
 <body>
@@ -179,7 +180,7 @@
             	<label for="exampleInputPassword1">Do you have affiliate program</label>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
                     Yes
                   </label>
                 </div>
@@ -208,45 +209,65 @@
               <tbody>
               		<tr>
                     	<td>
-                        	For our everyday business purposes — such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureaus
+                        	For our everyday business purposes-such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureaus
                       </td>
                       <td>
                  <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="EverydayBusiness" id="EverydayBusiness1" value="yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="EverydayBusiness" id="EverydayBusiness2" value="no">
                     No
                   </label>
                 </div>
                       </td>
                       <td>
-                     <div class="radio">
+                      
+                  <div id="EverydayBusiness_limit_div">
+                  <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="EverydayBusiness_limit" id="EverydayBusiness_limit" value="yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="EverydayBusiness_limit" id="EverydayBusiness_limit" value="no">
                     No
                   </label>
                 </div>
+                </div>
+                <div id="wedonotshare" style="display:none"><span>We do not share</span></div>
+                <script>
+						$("input[name='EverydayBusiness']").change(function(){
+						   
+							if($(this).val()=="no")
+							{
+								$("#wedonotshare").show();
+								$("#EverydayBusiness_limit_div").hide();
+							}
+							else
+							{
+								 $("#wedonotshare").hide(); 
+								 $("#EverydayBusiness_limit_div").show();
+							}
+							
+						});
+                </script>
                       </td>
                   </tr>
                  <tr>
                     	<td>
-                       For our marketing purposes — with service providers we use to offer our products and services to you (please see below to limit the ways we contact you)
+                       For our marketing purposes-with service providers we use to offer our products and services to you (please see below to limit the ways we contact you)
                       </td>
                       <td>
                  <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
                     Yes
                   </label>
                 </div>
@@ -260,7 +281,7 @@
                       <td>
                      <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
                     Yes
                   </label>
                 </div>
@@ -279,7 +300,7 @@
                       <td>
                  <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
                     Yes
                   </label>
                 </div>
@@ -293,7 +314,7 @@
                       <td>
                      <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
                     Yes
                   </label>
                 </div>
