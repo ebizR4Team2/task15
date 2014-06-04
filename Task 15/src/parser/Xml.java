@@ -30,8 +30,8 @@ import bean.TestBean;
 
 public class Xml {
 	private Document document;
-	private static String filePath = System.getProperty("user.dir")
-			+ "\\form\\";
+	private static String filePath = System.getProperty("user.dir") +System.getProperty("file.seperator")
+			+"form";
 	private FormBeanFactory<TestBean> formBeanFactory = FormBeanFactory
 			.getInstance(TestBean.class);
 

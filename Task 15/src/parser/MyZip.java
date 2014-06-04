@@ -8,7 +8,8 @@ import org.apache.tools.ant.types.FileSet;
 
 public class MyZip {
 	private File zipFile;
-	private static String filePath = System.getProperty("user.dir") + "\\form\\";
+	private static String filePath = System.getProperty("user.dir") +System.getProperty("file.separator")
+			+"form";
 	  
     public MyZip(String fileName) {  
         zipFile = new File(fileName);  
