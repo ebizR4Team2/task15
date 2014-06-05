@@ -536,7 +536,7 @@
 
 				</div>
 
-
+		<hr>
 				<button type="submit" class="btn btn-default">Save and download XML for current step</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				
