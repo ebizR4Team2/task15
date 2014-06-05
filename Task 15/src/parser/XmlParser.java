@@ -35,8 +35,7 @@ import bean.TestBean;
 public class XmlParser {
 
 	private Document document;
-	private static String filePath = System.getProperty("user.dir") + System.getProperty("file.separator")
-			+"form" + System.getProperty("file.separator");
+	private static String filePath;
 	
 	public static void main(String args[]) {
 		XmlParser dd = new XmlParser();
@@ -109,11 +108,19 @@ public class XmlParser {
 	 * @return generated xml url
 	 */
 	public String saveXml(HttpServletRequest request, String fileName) {
-		Enumeration<String> ids = request.getAttributeNames();
-		while (ids.hasMoreElements()) {
-			String name = ids.nextElement();
+		filePath = request.getSession().getServletContext().getRealPath("/");
+		if (!fileName.endsWith(".xml")) {
+			return "name must end with .xml";
+		}
+		Element root = this.document.createElement("values");
+		this.document.appendChild(root);
+		
+		Enumeration<String> params = request.getParameterNames();
+		while (params.hasMoreElements()) {
+			String name = params.nextElement();
 			Element elm = this.document.createElement(name);
-			elm.appendChild(this.document.createTextNode((String) request.getAttribute(name)));
+			elm.appendChild(this.document.createTextNode((String) request.getParameter(name)));
+			root.appendChild(elm);
 		}
 		TransformerFactory tf = TransformerFactory.newInstance();
 		try {

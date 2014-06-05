@@ -19,7 +19,7 @@
 			<h3 class="text-muted">Interactive Form Builder</h3>
 		</div>
 		<div class="content">
-			<form role="form">
+			<form role="form" method="post" action="save.do">
 				<div class="form-group">
 					<label for="nameofinstitution">Enter the name of financial
 						institution</label> <input type="text" class="form-control"
@@ -30,7 +30,7 @@
 					<input type="text" class="form-control" name="lastreviseddate">
 				</div>
 				<div class="form-group">
-					<label for="typeofpersonalinfo">What types of personal
+					<label for="typeofpersonalinfo" >What types of personal
 						information you collect and share? (Choose minimum of 5)</label>
 					<div class="checkbox">
 						<label> <input type="checkbox" name="ssn" value="" checked disabled>
@@ -62,94 +62,94 @@
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> credit
+						<label> <input type="checkbox" value="" name="credityHistory"> credit
 							history
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> credit
+						<label> <input type="checkbox" value="" name="creditScores"> credit
 							scores
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> assets
+						<label> <input type="checkbox" value="" name="assets"> assets
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value="">
+						<label> <input type="checkbox" value="" name="investmentExperience">
 							investment experience
 						</label>
 					</div>
 
 					<div class="checkbox">
-						<label> <input type="checkbox" value="">
+						<label> <input type="checkbox" value="" name="credit-basedInsuranceScores">
 							credit-based insurance scores
 						</label>
 					</div>
 
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> insurance
+						<label> <input type="checkbox" value="" name="insuranceCalimHistory"> insurance
 							claim history
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> medical
+						<label> <input type="checkbox" value="" name="medicalInformation"> medical
 							information
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> overdraft
+						<label> <input type="checkbox" value="" name="overdraftHistory"> overdraft
 							history
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> purchase
+						<label> <input type="checkbox" value="" name="purchaseHistory"> purchase
 							history
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> account
+						<label> <input type="checkbox" value="" name="purchaseHistory"> account
 							transactions
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> risk
+						<label> <input type="checkbox" value="" name="risk tolerance"> risk
 							tolerance
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value="">
+						<label> <input type="checkbox" value="" name="medical-relatedDebts">
 							medical-related debts
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> credit
+						<label> <input type="checkbox" value="" name="cardOrOtherDebt"> credit
 							card or other debt
 						</label>
 					</div>
 
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> mortgage
+						<label> <input type="checkbox" value="" name="ratesAndPayments"> mortgage
 							rates and payments
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value="">
+						<label> <input type="checkbox" value="" name="retirementAssets">
 							retirement assets
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> checking
+						<label> <input type="checkbox" value="" name="accountInformation"> checking
 							account information
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value="">
+						<label> <input type="checkbox" value="" name="employmentInformation">
 							employment information
 						</label>
 					</div>
 					<div class="checkbox">
-						<label> <input type="checkbox" value=""> wire
+						<label> <input type="checkbox" value="" name="transferInstructions"> wire
 							transfer instructions
 						</label>
 					</div>
@@ -210,7 +210,7 @@
 						style="display: none">
 						<label for="exampleInputPassword1">Who are your
 							affiliates?</label>
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="3" name="whoareyouraffiliates"></textarea>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Do you share
@@ -244,7 +244,7 @@
 						style="display: none;">
 						<label for="exampleInputPassword1">Who are your
 							non-affiliates?</label>
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="3" name="whoareyournonaffiliates"></textarea>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Do you engage in joint
@@ -275,7 +275,7 @@
 						style="display: none;">
 						<label for="exampleInputPassword1">Who are your joint
 							marketing partners?</label>
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="3" name="whoareyourmarketingpartners"></textarea>
 					</div>
 
 
@@ -525,13 +525,13 @@
 
 					<div class="form-group">
 						<label for="exampleInputEmail1">Enter your phone number</label> <input
-							type="tel" class="form-control" id="exampleInputEmail1">
+							type="tel" class="form-control" id="exampleInputEmail1" name="phoneNumber">
 					</div>
 
 					<div class="form-group">
 						<label for="exampleInputEmail1">Enter your website domain
 							name</label> <input type="url" class="form-control"
-							id="exampleInputEmail1">
+							id="exampleInputEmail1" name="websiteDomainName">
 					</div>
 
 				</div>

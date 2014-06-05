@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
 public class Controller extends HttpServlet {
-	
 	private static final long serialVersionUID = 1L;
 
     public void init() throws ServletException {
     	Action.add(new IndexAction());
     	Action.add(new ImportAction());
     	Action.add(new ContinueAction());
+    	Action.add(new SaveAction());
         //Action.add(new ChangePwdAction());
     }
 
