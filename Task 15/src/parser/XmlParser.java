@@ -110,7 +110,6 @@ public class XmlParser {
 	 */
 	public File saveXml(HttpServletRequest request, String fileName) throws Exception {
 		filePath = request.getSession().getServletContext().getRealPath("/");
-		
 		if (!fileName.endsWith(".xml")) {
 			throw new Exception("must import .xml file");
 		}
