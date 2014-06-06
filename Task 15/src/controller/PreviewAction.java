@@ -2,15 +2,18 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import parser.Html;
+import parser.MyZip;
 import parser.XmlParser;
 
 public class PreviewAction extends Action {
+	private static String filePath2;
 
 	@Override
 	public String getName() {
@@ -32,9 +35,6 @@ public class PreviewAction extends Action {
 		
 		System.out.println(hp.size());
 		
-		
-
-		
 		StringBuffer filePath = request.getRequestURL();
 
 		int index = filePath.length()-1;
@@ -55,6 +55,23 @@ public class PreviewAction extends Action {
 			//ht.setContent("nameofinstitution", hp.get("nameofinstitution"));
 			ht.makeHtmlByDoc("output.html");
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		filePath2 = request.getSession().getServletContext().getRealPath("/")
+				+ "form" + System.getProperty("file.separator");
+		
+		try {
+			if (request.getParameter("saveforlater") != null) {
+				ArrayList<File> list = new ArrayList<File>();
+				MyZip zip = new MyZip("test.zip", request);
+				list.add(new File(filePath2 + "test.xml"));
+				File newZip = zip.compressFiles(list, filePath2 + "test.zip");
+				return newZip.getName();
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
