@@ -1,0 +1,33 @@
+table 
+{
+border: 1px solid #D3D3D3;
+width: 75%;
+
+}
+td 
+{
+border: 1px solid #D3D3D3;
+height:50px;
+
+}
+.colorclass
+{
+background: red;
+color: white;
+font-weight : bold;
+}
+.content {
+  width: 100%;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+#centertext {
+text-align: left;
+padding-left : 10px;
+}
+#leftcol{
+width:20%;
+}
+#leftcolpage2{
+width:30%;
+}
