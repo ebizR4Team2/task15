@@ -17,7 +17,7 @@ public class Html {
 			+"form";
 
 	public Html(String fileName) throws IOException {
-		File input = new File( filePath + fileName);
+		File input = new File(fileName);
 		this.doc = Jsoup.parse(input, "UTF-8");
 		this.elements = doc.getAllElements();
 		for (Element elm : elements) {
