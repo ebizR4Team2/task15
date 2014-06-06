@@ -28,7 +28,7 @@ public class Controller extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String nextPage = performTheAction(request);
+    	String nextPage = performTheAction(request);
         sendToNextPage(nextPage,request,response);
     }
     
@@ -68,11 +68,23 @@ public class Controller extends HttpServlet {
 			return;
     	}
     	
-    	if (nextPage.endsWith(".jsp") || nextPage.endsWith(".html")) {
+    	if (nextPage.endsWith(".jsp")) {
 	   		RequestDispatcher d = request.getRequestDispatcher("WEB-INF/" + nextPage);
 	   		d.forward(request,response);
 	   		return;
     	}
+    	if (nextPage.endsWith(".html")) {
+    		RequestDispatcher d = request.getRequestDispatcher("form/" + nextPage);
+	   		d.forward(request,response);
+	   		return;
+    	}
+    	
+    	if (nextPage.endsWith(".zip")) {
+    		RequestDispatcher d = request.getRequestDispatcher("form/" + nextPage);
+	   		d.forward(request,response);
+	   		return;
+    	}
+    	
     	
     	if (nextPage.equals("url")) {
     		response.sendRedirect((String) request.getAttribute("url"));
