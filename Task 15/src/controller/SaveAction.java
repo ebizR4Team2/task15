@@ -32,18 +32,16 @@ public class SaveAction extends Action {
 		try {
 			xml.saveXml(request, "test.xml");
 			
-			
-			ArrayList<File> list = new ArrayList<File>();
-			MyZip zip = new MyZip("test.zip", request);
-			list.add(new File(filePath + "test.xml"));
 			if (request.getParameter("preview") != null) {
+				ArrayList<File> list = new ArrayList<File>();
+				MyZip zip = new MyZip("test.zip", request);
+				list.add(new File(filePath + "test.xml"));
 				list.add(new File(filePath + "style.css"));
 				list.add(new File(filePath + "output.html"));
+				File newZip = zip.compressFiles(list, filePath + "test.zip");
+				System.out.println(newZip.getName());
+				return newZip.getName();
 			}
-			
-			File newZip = zip.compressFiles(list, filePath + "test.zip");
-			System.out.println(newZip.getName());
-			return newZip.getName();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
