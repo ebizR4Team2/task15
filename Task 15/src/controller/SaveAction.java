@@ -25,9 +25,10 @@ public class SaveAction extends Action {
 	@Override
 	public String perform(HttpServletRequest request) {
 		XmlParser xml = new XmlParser();
-		String newXmlFile = xml.saveXml(request, "test.xml");
-		HashMap<String, String> map;	// test of import
 		try {
+			File newXmlFile = xml.saveXml(request, "test.xml");
+			HashMap<String, String> map;	// test of import
+		
 			map = xml.importXml(new File(request.getSession().getServletContext().getRealPath("/") + "test.xml"));
 			Iterator itr = map.entrySet().iterator();
 			while (itr.hasNext()) {
@@ -41,6 +42,9 @@ public class SaveAction extends Action {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

@@ -106,11 +106,12 @@ public class XmlParser {
 	 * @param request contains the value of user entered
 	 * @param fileName the name for the generated xml file
 	 * @return generated xml url
+	 * @throws Exception 
 	 */
-	public String saveXml(HttpServletRequest request, String fileName) {
+	public File saveXml(HttpServletRequest request, String fileName) throws Exception {
 		filePath = request.getSession().getServletContext().getRealPath("/");
 		if (!fileName.endsWith(".xml")) {
-			return "name must end with .xml";
+			throw new Exception("must import .xml file");
 		}
 		Element root = this.document.createElement("values");
 		this.document.appendChild(root);
@@ -142,7 +143,7 @@ public class XmlParser {
 		} catch (TransformerException e) {
 			System.out.println(e.getMessage());
 		}
-		return filePath + fileName;
+		return new File(filePath + fileName);
 	}
 
 	// example
