@@ -27,7 +27,7 @@
 			<iframe name="myframe" src="${requestScope.previewUrl}" frameborder="0" width="100%" height="500" ></iframe> 
 			<br>
 			<br>
-			<a href="${requestScope.previewUrl}">Click here to view it in browser</a>
+			<a href="${requestScope.previewUrl}" target="blank">Click here to view it in browser</a>
 			<br>
 			<br>
 			<button type="submit" class="btn btn-default">Back to edit</button>
