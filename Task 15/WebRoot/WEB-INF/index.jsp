@@ -19,7 +19,7 @@
 			<h3 class="text-muted">Interactive Form Builder</h3>
 		</div>
 		<div class="content">
-			<form role="form" method="post" action="save.do">
+			<form role="form" method="post" action="preview.do">
 				<div class="form-group">
 					<label for="nameofinstitution">Enter the name of financial
 						institution</label> <input type="text" class="form-control"
@@ -867,12 +867,12 @@
 				
 
 		<hr>
-		<button type="submit" class="btn btn-default">Preview</button>
+		<button type ="submit" class="btn btn-default">Preview</button>
 				
 				
 			
 			
-			<a href=""><button class="btn btn-primary">Download</button></a>
+			
 			</form>
 		</div>
 	</div>
