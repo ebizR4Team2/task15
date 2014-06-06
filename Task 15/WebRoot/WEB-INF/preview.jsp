@@ -23,10 +23,17 @@
 		</div>
 		
 		<div class="content">
-			
+
+			<iframe name="myframe" src="${requestScope.previewUrl}" frameborder="0" width="100%" height="500" ></iframe> 
+			<br>
+			<br>
+			<a href="${requestScope.previewUrl}">Click here to view it in browser</a>
+			<br>
+			<br>
 			<button type="submit" class="btn btn-default">Back to edit</button>
 			<button type="submit" class="btn btn-default">Download</button>
 		</div>
+
 	</div>
 
 </body>

@@ -13,7 +13,14 @@ public class PreviewAction extends Action {
 	public String perform(HttpServletRequest request) {
 		
 		StringBuffer filePath = request.getRequestURL();
-		System.out.println(filePath);
+
+		int index = filePath.length()-1;
+		while (filePath.charAt(index) != '/') {
+			index--;
+		}
+		filePath.replace(index+1, filePath.length(), "form/output.html");
+		request.setAttribute("previewUrl", filePath);
+
 		return "preview.jsp";
 	}
 
