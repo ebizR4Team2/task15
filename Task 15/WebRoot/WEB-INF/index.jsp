@@ -867,8 +867,8 @@
 				
 
 		<hr>
-		<button type ="submit" class="btn btn-default">Preview</button>
-				
+		<button type ="submit" name="preview" class="btn btn-default">Preview</button>
+		<button type ="submit" name="saveforlater" class="btn btn-default">Save and fill later</button>
 				
 			
 			
