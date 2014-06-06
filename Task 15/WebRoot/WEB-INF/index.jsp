@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html>
 <head>
@@ -867,8 +869,9 @@
 				
 
 		<hr>
-		<button type ="submit" name="preview" class="btn btn-default">Preview</button>
-		<button type ="submit" name="saveforlater" class="btn btn-default">Save and fill later</button>
+		<button type="submit" name="preview" class="btn btn-default">Preview</button>
+		<button type ="submit" name="saveforlater" class="btn btn-default">Save for later</button>
+		
 				
 			
 			

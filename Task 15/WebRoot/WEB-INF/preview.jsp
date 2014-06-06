@@ -21,7 +21,9 @@
 			</ul>
 			<h3 class="text-muted">Interactive Form Builder</h3>
 		</div>
+		
 		<div class="content">
+			
 			<button type="submit" class="btn btn-default">Back to edit</button>
 			<button type="submit" class="btn btn-default">Download</button>
 		</div>
