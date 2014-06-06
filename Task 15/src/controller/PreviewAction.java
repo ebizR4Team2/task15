@@ -12,7 +12,7 @@ public class PreviewAction extends Action {
 	@Override
 	public String perform(HttpServletRequest request) {
 		
-		String filePath = request.getServletPath();
+		StringBuffer filePath = request.getRequestURL();
 		System.out.println(filePath);
 		return "preview.jsp";
 	}
