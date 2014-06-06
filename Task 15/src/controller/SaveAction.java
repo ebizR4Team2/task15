@@ -24,6 +24,20 @@ public class SaveAction extends Action {
 
 	@Override
 	public String perform(HttpServletRequest request) {
+		
+		
+		XmlParser xml = new XmlParser();
+		try {
+			xml.saveXml(request, "test.xml");
+//			MyZip zip = new MyZip("test.zip");
+//			if (request.getParameter("saveforlater") != null) {
+//				return zip.compress(request, "xml").getName();
+//			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		if (request.getParameter("saveforlater") != null) {
 			return "test.xml";
 		}
