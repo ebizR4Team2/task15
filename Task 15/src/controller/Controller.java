@@ -73,18 +73,11 @@ public class Controller extends HttpServlet {
 	   		d.forward(request,response);
 	   		return;
     	}
-    	if (nextPage.endsWith(".html")) {
+    	if (nextPage.endsWith(".html") || nextPage.endsWith(".zip") || nextPage.endsWith(".xml")) {
     		RequestDispatcher d = request.getRequestDispatcher("form/" + nextPage);
 	   		d.forward(request,response);
 	   		return;
     	}
-    	
-    	if (nextPage.endsWith(".zip")) {
-    		RequestDispatcher d = request.getRequestDispatcher("form/" + nextPage);
-	   		d.forward(request,response);
-	   		return;
-    	}
-    	
     	
     	if (nextPage.equals("url")) {
     		response.sendRedirect((String) request.getAttribute("url"));
