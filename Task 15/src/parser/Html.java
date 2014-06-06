@@ -36,7 +36,13 @@ public class Html {
 	 * @param content the content you want to fill with
 	 */
 	public void setContent(String id, String content) {
+		if (id == null || id.isEmpty()) {
+			return;
+		}
 		Element element = doc.getElementById(id);
+		if (element == null) {
+			return;
+		}
 		element.empty(); // remove original content
 		element.appendText(content);
 	}
