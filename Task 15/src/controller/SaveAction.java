@@ -12,6 +12,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
+import parser.MyZip;
 import parser.XmlParser;
 
 public class SaveAction extends Action {
@@ -29,10 +30,10 @@ public class SaveAction extends Action {
 		XmlParser xml = new XmlParser();
 		try {
 			xml.saveXml(request, "test.xml");
-//			MyZip zip = new MyZip("test.zip");
-//			if (request.getParameter("saveforlater") != null) {
-//				return zip.compress(request, "xml").getName();
-//			}
+			MyZip zip = new MyZip("test.zip");
+			if (request.getParameter("saveforlater") != null) {
+				return zip.compress(request, "xml").getName();
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

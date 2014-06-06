@@ -20,7 +20,7 @@ public class MyZip {
     }  
       
     public File compress(HttpServletRequest request, String type) {  
-    	filePath = request.getSession().getServletContext().getRealPath("/") + "form" + System.getProperty("file.separator");
+    	filePath = request.getSession().getServletContext().getRealPath("/") + "form" ;
         File srcdir = new File(filePath);  
         if (!srcdir.exists()) {
             throw new RuntimeException(filePath + " doesn't exist!"); 

@@ -120,6 +120,9 @@ public class XmlParser {
 		} catch (TransformerException e) {
 			System.out.println(e.getMessage());
 		}
-		return new File(filePath + fileName);
+		
+		File file = new File(filePath + fileName);
+		System.out.print(file.getPath());
+		return file;
 	}
 }
