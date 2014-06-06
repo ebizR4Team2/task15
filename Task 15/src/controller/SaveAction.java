@@ -24,29 +24,8 @@ public class SaveAction extends Action {
 
 	@Override
 	public String perform(HttpServletRequest request) {
-		XmlParser xml = new XmlParser();
-		try {
-			File newXmlFile = xml.saveXml(request, "test.xml");
-			HashMap<String, String> map;	// test of import
-		
-			map = xml.importXml(new File(request.getSession().getServletContext().getRealPath("/") + "test.xml"));
-			Iterator itr = map.entrySet().iterator();
-			while (itr.hasNext()) {
-				Entry entry = (Entry) itr.next();
-				System.out.println(entry.getKey() + ": " + entry.getValue());
-			}
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (request.getParameter("saveforlater") != null) {
+			return "test.xml";
 		}
 		
 		return "page2.jsp";
