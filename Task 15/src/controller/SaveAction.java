@@ -32,7 +32,9 @@ public class SaveAction extends Action {
 			xml.saveXml(request, "test.xml");
 			MyZip zip = new MyZip("test.zip");
 			if (request.getParameter("saveforlater") != null) {
-				return zip.compress(request, "xml").getName();
+				File newZip = zip.compress(request, "xml");
+				System.out.print(newZip.getName());
+				return newZip.getName();
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

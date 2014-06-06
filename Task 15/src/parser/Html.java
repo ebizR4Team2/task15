@@ -3,6 +3,8 @@ package parser;
 import java.io.File;
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,21 +15,23 @@ public class Html {
 	// http://www.oschina.net/p/jsoup
 	private Document doc;
 	private Elements elements;
-	private static String filePath = System.getProperty("user.dir") +System.getProperty("file.separator")
-			+"form";
+	private static String filePath;
 
-	public Html(String fileName) throws IOException {
-		File input = new File(fileName);
+	public Html(String fileName, HttpServletRequest request) throws IOException {
+		filePath = request.getSession().getServletContext().getRealPath("/") + "form" + System.getProperty("file.separator");
+		File input = new File(filePath + fileName);
 		this.doc = Jsoup.parse(input, "UTF-8");
 		this.elements = doc.getAllElements();
-		for (Element elm : elements) {
-			System.out.println(elm);
-		}
+		System.out.print(input.getPath());
+//		for (Element elm : elements) {
+//			System.out.println(elm);
+//		}
 	}
 	
 	/**
 	 * Set content of certain element according to element id;
-	 * ID must be the direct element you want to change
+	 * ID must be the direct element you want to change;
+	 * Make sure use this.makeHtmlByDoc to save the change
 	 * @param id element unique id you want to change its content
 	 * @param content the content you want to fill with
 	 */
@@ -69,11 +73,5 @@ public class Html {
 		}
 		System.out.println("gererated: " + filePath + fileName);
 		return true;
-	}
-	
-	public static void main(String[] args) throws IOException {
-		Html html = new Html("index.html");
-		html.setContent("test", "hahhaha");
-		html.makeHtmlByDoc("test.html");
 	}
 }

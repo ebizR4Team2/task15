@@ -44,11 +44,10 @@ public class PreviewAction extends Action {
 		filePath.replace(index+1, filePath.length(), "form/output.html");
 		request.setAttribute("previewUrl", filePath);
 
-		String outputPath = request.getSession().getServletContext().getRealPath("/") + "form" + System.getProperty("file.separator") + "output.html";
-		System.out.println(outputPath);
-		try {
-			Html ht = new Html(outputPath);
+		try {System.out.println(hp.get("nameofinstitution"));
+			Html ht = new Html("output.html", request);
 			ht.setContent("nameofinstitution", hp.get("nameofinstitution"));
+			ht.makeHtmlByDoc("output.html");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
