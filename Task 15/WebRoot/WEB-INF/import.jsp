@@ -1,4 +1,5 @@
-<!doctype html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -17,10 +18,13 @@
         <h3 class="text-muted">Interactive Form Builder</h3>
       </div>
       <div class="content">
-        <form role="form" enctype="multipart/form-data">
+      <c:forEach var="error" items="${errors}">
+			<h4 style="color: red">${error}</h4><br/>
+		</c:forEach>
+        <form method="post" action="import.do" enctype="multipart/form-data">
           <div class="form-group">
             <label for="exampleInputFile">File input</label>
-            <input type="file" name="exampleInputFile">
+            <input type="file" name="xml" value="${xml}">
             <p class="help-block">Select the XML file</p>
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
