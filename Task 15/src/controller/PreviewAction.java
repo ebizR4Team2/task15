@@ -65,6 +65,14 @@ public class PreviewAction extends Action {
 				hp.remove("desotherimportinfo");
 			}
 			
+			if (hp.get("haveaffiliate") != null && hp.get("haveaffiliate").equals("no")) {
+				hp.put("whoareyouraffiliates", "has no affiliates");
+			} else if (hp.get("haveaffiliate") != null && hp.get("sharepersonalinfo") != null 
+					&& hp.get("haveaffiliate").equals("yes") && hp.get("sharepersonalinfo").equals("no")) {
+				hp.put("whoareyouraffiliates", "does not share with our affiliates");
+			}
+			
+			
 
 			for (String key: hp.keySet()) {
 				ht.setContent(key, hp.get(key));
