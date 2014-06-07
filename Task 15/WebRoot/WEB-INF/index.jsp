@@ -18,7 +18,7 @@
 				<li class="active"><a href="index.do">Build</a></li>
 				<li><a href="import.do">Import</a></li>
 			</ul>
-			<h3 class="text-muted">Interactive Form Builder</h3>
+			<a href="/"><h3 class="text-muted">Interactive Form Builder</h3></a>
 		</div>
 		<div class="content">
 			<form role="form" method="post" action="preview.do">
@@ -26,6 +26,11 @@
 					<label for="nameofinstitution">Enter the name of financial
 						institution</label> <input type="text" class="form-control"
 						name="nameofinstitution">
+				</div>
+				<div class="form-group">
+					<label for="nameofinstitution">Enter the address of financial
+						institution</label> <input type="text" class="form-control"
+						name="nameofinstitution" placeholder="Street, city, state, zip">
 				</div>
 				<div class="form-group">
 					<label for="lastreviseddate">Enter revised date</label> <input
