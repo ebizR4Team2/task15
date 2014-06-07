@@ -72,6 +72,23 @@ public class PreviewAction extends Action {
 				hp.put("whoareyouraffiliates", "does not share with our affiliates");
 			}
 			
+			if (hp.get("sharepersonalinfononaffiliates") != null && hp.get("sharepersonalinfononaffiliates").equals("no")) {
+				hp.put("whoareyournonaffiliates", "does not share with nonaffiliates so they can market to you");
+			} 
+			
+			if (hp.get("jointmarketing") != null && hp.get("jointmarketing").equals("no")) {
+				hp.put("whoareyourmarketingpartners", "doesn't jointly market");
+			}
+			
+			if (hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("no")) {
+				System.out.println("provideoptoutform no");
+				hp.put("provideoptoutform", "");
+			} else if(hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("yes")){
+				
+				System.out.println("provideoptoutform yes");
+				hp.remove("provideoptoutform");
+				
+			}
 			
 
 			for (String key: hp.keySet()) {
