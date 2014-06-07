@@ -39,3 +39,59 @@ width:30%;
 #personInfoTd {
 	
 }
+
+.spltable {
+border:none;
+}
+.spltable1{
+border:none;
+width:30%;
+}
+.leftdiv{
+float:left;
+width:100px;
+}
+.leftdivonline{
+float:left;
+width:150px;
+}
+.centerdiv{
+float:left;
+width:200px;
+border:1px solid #D3D3D3; 
+margin-right:10px;
+padding-right:10px;
+}
+.centerdivonline{
+float:left;
+width:300px;
+border:1px solid #D3D3D3; 
+margin-right:10px;
+padding-right:10px;
+}
+.rightdiv {
+float:left;
+border:1px solid #D3D3D3; 
+width:130px;
+height:165px;
+}
+.lefttable{
+border:none;
+background: red;
+color: white;
+font-weight : bold;
+width:100%;
+}
+.spltext {
+width:100%;
+}
+.centertable {
+border:none;
+width:100%;
+}
+.buttondiv {
+position:absolute;
+z-index:15;
+top:60%;
+left:50%;
+}

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 import parser.Html;
 import parser.MyZip;
@@ -53,7 +54,7 @@ public class PreviewAction extends Action {
 
 			
 			if(hp.get("nameofinstitution") != null) {
-				for (int i = 1; i <= 5; i++) {
+				for (int i = 1; i <= 4; i++) {
 					String nameString = "nameofinstitution" + i;
 					hp.put(nameString, hp.get("nameofinstitution"));
 				}
@@ -64,6 +65,8 @@ public class PreviewAction extends Action {
 			} else {
 				hp.remove("JointPolicy");
 			}
+			
+			
 			
 			if (hp.get("desotherimportinfo") != null && hp.get("desotherimportinfo").equals("no") ) {
 				hp.put("desotherimportinfo", "");
@@ -89,6 +92,10 @@ public class PreviewAction extends Action {
 				hp.put("whoareyourmarketingpartners", whoareyourmarketingpartners);
 			}
 			
+			/**
+			 * opt-out
+			 * */
+			
 			if (hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("no")) {
 				System.out.println("provideoptoutform no");
 				hp.put("provideoptoutform", "");
@@ -97,6 +104,31 @@ public class PreviewAction extends Action {
 				System.out.println("provideoptoutform yes");
 				hp.remove("provideoptoutform");
 				
+			}
+			
+			/**
+			 * opt-out options
+			 * */
+			
+			
+			if (hp.get("creditworth_limit") != null && hp.get("creditworth_limit").equals("Yes")) {
+				hp.put("optout_creditworth_limit", "Do not share information about my creditworthiness with your affiliates for their everyday business purposes.");
+			}
+			
+			if (hp.get("afftomarket_limit") != null && hp.get("afftomarket_limit").equals("Yes")) {
+				hp.put("optout_afftomarket_limit", "Do not allow your affiliates to use my personal information to market to me.");
+			}
+			
+			if (hp.get("nonafftomarket_limit") != null && hp.get("nonafftomarket_limit").equals("Yes")) {
+				hp.put("optout_nonafftomarket_limit", "Do not share my personal information with nonaffiliates to market their products and services to me.");
+			}
+			
+			if (hp.get("marketpurpose_limit") != null && hp.get("marketpurpose_limit").equals("Yes")) {
+				hp.put("optout_marketpurpose_limit", "Do not share my personal information to market to me.");
+			}
+			
+			if (hp.get("jointmarket_limit") != null && hp.get("jointmarket_limit").equals("Yes")) {
+				hp.put("optout_jointmarket_limit", "Do not share my personal information with other financial institutions to jointly market to me.");
 			}
 			
 
