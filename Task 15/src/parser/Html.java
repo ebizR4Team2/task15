@@ -35,18 +35,16 @@ public class Html {
 	 * @param id element unique id you want to change its content
 	 * @param content the content you want to fill with
 	 */
-	public void setContent(String name, String content) {
-		if (name == null || name.isEmpty()) {
+	public void setContent(String id, String content) {
+		if (id == null || id.isEmpty()) {
 			return;
 		}
-		Elements elements = doc.getElementsByAttribute(name);
-		for (Element element: elements) {
-			if (element == null) {
-				return;
-			}
-			element.empty(); // remove original content
-			element.appendText(content);
+		Element element = doc.getElementById(id);
+		if (element == null) {
+			return;
 		}
+		element.empty(); // remove original content
+		element.appendText(content);
 	}
 	
 	/**
