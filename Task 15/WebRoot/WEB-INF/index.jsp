@@ -25,28 +25,28 @@
 				<div class="form-group">
 					<label for="nameofinstitution">Enter the name of financial
 						institution</label> <input type="text" class="form-control"
-						name="nameofinstitution">
+						name="nameofinstitution" value="${nameofinstitution}">
 				</div>
 				<div class="form-group">
 					<label for="nameofinstitution">Enter the address of financial
 						institution</label> <input type="text" class="form-control"
-						name="nameofinstitution" placeholder="Street, city, state, zip">
+						name="addressofinstitution" placeholder="Street, city, state, zip" value="${addressofinstitution}">
 				</div>
 				<div class="form-group">
 					<label for="lastreviseddate">Enter revised date</label> <input
-						type="text" class="form-control" name="revdate">
+						type="text" class="form-control" name="revdate" value="${revdate}">
 				</div>
 
 				<div class="form-group">
 					<label for="exampleInputEmail1">Enter your customer service
 						phone number</label> <input type="tel" class="form-control"
-						id="exampleInputEmail1" name="phoneNumber">
+						id="exampleInputEmail1" name="phoneNumber" value="${phoneNumber}">
 				</div>
 
 				<div class="form-group">
 					<label for="exampleInputEmail1">Enter your website domain
 						name</label> <input type="text" class="form-control"
-						id="exampleInputEmail1" name="websiteDomainName">
+						id="exampleInputEmail1" name="websiteDomainName" value="${websiteDomainName}">
 				</div>
 
 				<div class="form-group">
@@ -61,7 +61,7 @@
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="income"
-							name="income">income
+							name="income" ${income}>income
 						</label>
 					</div>
 					<div class="checkbox">
@@ -190,9 +190,6 @@
 							instructions
 						</label>
 					</div>
-
-
-
 
 
 
@@ -675,7 +672,7 @@
 						<label for="exampleInputPassword1">Who are your
 							affiliates?</label>
 						<textarea class="form-control" rows="3"
-							name="whoareyouraffiliates"></textarea>
+							name="whoareyouraffiliates" ></textarea>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Do you share
@@ -710,7 +707,7 @@
 						<label for="exampleInputPassword1">Who are your
 							non-affiliates?</label>
 						<textarea class="form-control" rows="3"
-							name="whoareyournonaffiliates"></textarea>
+							name="whoareyournonaffiliates" ></textarea>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Do you engage in joint
