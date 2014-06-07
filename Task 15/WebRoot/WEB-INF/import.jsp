@@ -17,13 +17,12 @@
         <h3 class="text-muted">Interactive Form Builder</h3>
       </div>
       <div class="content">
-        <form role="form">
+        <form role="form" enctype="multipart/form-data">
           <div class="form-group">
             <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
+            <input type="file" name="exampleInputFile">
             <p class="help-block">Select the XML file</p>
           </div>
-   
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
       </div>

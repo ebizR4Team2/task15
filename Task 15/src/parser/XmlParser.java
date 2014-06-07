@@ -1,16 +1,14 @@
 package parser;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
-import java.lang.reflect.Method;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.parsers.DocumentBuilder;
@@ -24,14 +22,13 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.mybeans.form.FormBeanFactory;
+import org.mybeans.form.FileProperty;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import bean.TestBean;
 public class XmlParser {
 
 	private Document document;
@@ -60,6 +57,29 @@ public class XmlParser {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document document = db.parse(file);
+		
+		HashMap<String, String> valueMap = new HashMap<String, String>();
+		
+		NodeList nodes = (NodeList) document.getChildNodes();
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Node node = nodes.item(i);
+			NodeList values = node.getChildNodes();
+			// text node is also node, so need to skip one to get the right value
+			for (int j = 1; j < values.getLength(); j++) {
+				valueMap.put(values.item(j).getNodeName(), values.item(j++).getTextContent());
+				//System.out.println(values.item(j).getNodeName() + " : " + values.item(j++).getTextContent());
+			}
+		}
+		return valueMap;
+	}
+	
+	
+	public HashMap<String, String> importXml(FileProperty file) throws ParserConfigurationException, SAXException, IOException {
+		InputStream is = new ByteArrayInputStream(file.getBytes());
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document document = db.parse(is);
+		
 		
 		HashMap<String, String> valueMap = new HashMap<String, String>();
 		
