@@ -51,7 +51,13 @@ public class PreviewAction extends Action {
 			System.out.println(hp.get("nameofinstitution"));
 			Html ht = new Html("output.html", request);
 
-		
+			
+			if(hp.get("nameofinstitution") != null) {
+				for (int i = 1; i <= 5; i++) {
+					String nameString = "nameofinstitution" + i;
+					hp.put(nameString, hp.get("nameofinstitution"));
+				}
+			}
 			
 			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
 				hp.put("JointPolicy", "");
@@ -69,15 +75,18 @@ public class PreviewAction extends Action {
 				hp.put("whoareyouraffiliates", "has no affiliates");
 			} else if (hp.get("haveaffiliate") != null && hp.get("sharepersonalinfo") != null 
 					&& hp.get("haveaffiliate").equals("yes") && hp.get("sharepersonalinfo").equals("no")) {
-				hp.put("whoareyouraffiliates", "does not share with our affiliates");
+				String whoareyouraffiliates = hp.get("nameofinstitution") + " does not share with our affiliates";
+				hp.put("whoareyouraffiliates", whoareyouraffiliates);
 			}
 			
 			if (hp.get("sharepersonalinfononaffiliates") != null && hp.get("sharepersonalinfononaffiliates").equals("no")) {
-				hp.put("whoareyournonaffiliates", "does not share with nonaffiliates so they can market to you");
+				String whoareyournonaffiliates = hp.get("nameofinstitution") + " does not share with nonaffiliates so they can market to you";
+				hp.put("whoareyournonaffiliates", whoareyournonaffiliates);
 			} 
 			
 			if (hp.get("jointmarketing") != null && hp.get("jointmarketing").equals("no")) {
-				hp.put("whoareyourmarketingpartners", "doesn't jointly market");
+				String whoareyourmarketingpartners = hp.get("nameofinstitution") + " doesn't jointly market";
+				hp.put("whoareyourmarketingpartners", whoareyourmarketingpartners);
 			}
 			
 			if (hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("no")) {
