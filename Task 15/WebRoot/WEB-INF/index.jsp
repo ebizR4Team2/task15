@@ -28,9 +28,22 @@
 						name="nameofinstitution">
 				</div>
 				<div class="form-group">
-					<label for="lastreviseddate">Enter last revised date</label> <input
+					<label for="lastreviseddate">Enter revised date</label> <input
 						type="text" class="form-control" name="revdate">
 				</div>
+
+				<div class="form-group">
+					<label for="exampleInputEmail1">Enter your customer service
+						phone number</label> <input type="tel" class="form-control"
+						id="exampleInputEmail1" name="phoneNumber">
+				</div>
+
+				<div class="form-group">
+					<label for="exampleInputEmail1">Enter your website domain
+						name</label> <input type="text" class="form-control"
+						id="exampleInputEmail1" name="websiteDomainName">
+				</div>
+
 				<div class="form-group">
 					<label for="typeofpersonalinfo">What types of personal
 						information you collect and share? (Choose minimum of 5)</label>
@@ -198,25 +211,446 @@
 
 							if ($(this).val() == "yes") {
 								$("#sharepersonalinfo").show();
+								$("#sharepersonalinfo_question").show();
 							} else {
 								$("#sharepersonalinfo").hide();
+								$("#sharepersonalinfo_question").hide();
 							}
 
 						});
 					</script>
 
-					<div class="form-group" id="sharepersonalinfo"
+
+
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Reasons you can share your customer's information</th>
+								<th>Do you share?</th>
+								<th>Can customer limit this sharing?</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>For everyday business purposes-such as to process
+									customer's transactions, maintain customer's account(s),
+									respond to court orders and legal investigations, or report to
+									credit bureaus</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="EverydayBusiness"
+											id="EverydayBusiness1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="EverydayBusiness"
+											id="EverydayBusiness2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+
+									<div id="EverydayBusiness_limit_div">
+										<div class="radio">
+											<label> <input type="radio"
+												name="EverydayBusiness_limit" id="EverydayBusiness_limit"
+												value="Yes"> Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio"
+												name="EverydayBusiness_limit" id="EverydayBusiness_limit"
+												value="No"> No
+											</label>
+										</div>
+										
+									</div>
+									<div id="wedonotshare1" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='EverydayBusiness']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare1")
+																		.show();
+																$(
+																		"#EverydayBusiness_limit_div")
+																		.hide();
+															
+																
+															} else {
+																$(
+																		"#wedonotshare1")
+																		.hide();
+																$(
+																		"#EverydayBusiness_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+								</td>
+							</tr>
+							<tr>
+								<td>For marketing purposes-with service providers you use
+									to offer your products and services to customer</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="marketpurpose"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="marketpurpose"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+									<div id="marketpurpose_limit_div">
+										<div class="radio">
+											<label> <input type="radio"
+												name="marketpurpose_limit" id="optionsRadios1"
+												value="Yes"> Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio"
+												name="marketpurpose_limit" id="optionsRadios2"
+												value="No"> No
+											</label>
+										</div>
+									</div>
+
+									<div id="wedonotshare2" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='marketpurpose']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare2")
+																		.show();
+																$(
+																		"#marketpurpose_limit_div")
+																		.hide();
+															} else {
+																$(
+																		"#wedonotshare2")
+																		.hide();
+																$(
+																		"#marketpurpose_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+								</td>
+							</tr>
+
+
+
+							<tr>
+								<td>For joint marketing with other financial companies</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="jointmarket"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="jointmarket"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+									<div id="jointmarket_limit_div">
+										<div class="radio">
+											<label> <input type="radio" name="jointmarket_limit"
+												id="optionsRadios1" value="Yes"> Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio" name="jointmarket_limit"
+												id="optionsRadios2" value="No"> No
+											</label>
+										</div>
+									</div>
+									<div id="wedonotshare3" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='jointmarket']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare3")
+																		.show();
+																$(
+																		"#jointmarket_limit_div")
+																		.hide();
+															} else {
+																$(
+																		"#wedonotshare3")
+																		.hide();
+																$(
+																		"#jointmarket_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+
+
+								</td>
+							</tr>
+							<tr>
+								<td>For afiliate's everyday business purpose information
+									about your transactions and experiences</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="affeverydaybusi"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="affeverydaybusi"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+									<div id="affeverydaybusi_limit_div">
+										<div class="radio">
+											<label> <input type="radio"
+												name="affeverydaybusi_limit" id="optionsRadios1"
+												value="Yes"> Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio"
+												name="affeverydaybusi_limit" id="optionsRadios2"
+												value="No"> No
+											</label>
+										</div>
+									</div>
+									<div id="wedonotshare4" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='affeverydaybusi']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare4")
+																		.show();
+																$(
+																		"#affeverydaybusi_limit_div")
+																		.hide();
+															} else {
+																$(
+																		"#wedonotshare4")
+																		.hide();
+																$(
+																		"#affeverydaybusi_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+
+								</td>
+							</tr>
+
+							<tr>
+								<td>For affiliates' everyday business purposes information
+									about your creditworthiness</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="creditworth"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="creditworth"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+									<div id="creditworth_limit_div">
+										<div class="radio">
+											<label> <input type="radio" name="creditworth_limit"
+												id="optionsRadios1" value="Yes"> Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio" name="creditworth_limit"
+												id="optionsRadios2" value="No"> No
+											</label>
+										</div>
+									</div>
+									<div id="wedonotshare5" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='creditworth']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare5")
+																		.show();
+																$(
+																		"#creditworth_limit_div")
+																		.hide();
+															} else {
+																$(
+																		"#wedonotshare5")
+																		.hide();
+																$(
+																		"#creditworth_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+
+								</td>
+							</tr>
+
+							<tr style="display: none" id="sharepersonalinfo">
+								<td>For our affiliates to market to customer</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="afftomarket"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="afftomarket"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+								<div id="afftomarket_limit_div">
+									<div class="radio">
+										<label> <input type="radio" name="afftomarket_limit"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="afftomarket_limit"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</div>
+								   <div id="wedonotshare6" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='afftomarket']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare6")
+																		.show();
+																$(
+																		"#afftomarket_limit_div")
+																		.hide();
+															} else {
+																$(
+																		"#wedonotshare6")
+																		.hide();
+																$(
+																		"#afftomarket_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+								</td>
+							</tr>
+
+							<tr>
+								<td>For nonaffiliates to market to customer</td>
+								<td>
+									<div class="radio">
+										<label> <input type="radio" name="nonafftomarket"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="nonafftomarket"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</td>
+								<td>
+								<div id="nonafftomarket_limit_div">
+									<div class="radio">
+										<label> <input type="radio" name="nonafftomarket_limit"
+											id="optionsRadios1" value="Yes"> Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="nonafftomarket_limit"
+											id="optionsRadios2" value="No"> No
+										</label>
+									</div>
+								</div>
+								  <div id="wedonotshare7" style="display: none">
+										<span>You do not share</span>
+									</div> <script>
+										$("input[name='nonafftomarket']")
+												.change(
+														function() {
+
+															if ($(this).val() == "No") {
+																$(
+																		"#wedonotshare7")
+																		.show();
+																$(
+																		"#nonafftomarket_limit_div")
+																		.hide();
+															} else {
+																$(
+																		"#wedonotshare7")
+																		.hide();
+																$(
+																		"#nonafftomarket_limit_div")
+																		.show();
+															}
+
+														});
+									</script>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="form-group" id="sharepersonalinfo_question"
 						style="display: none">
 						<label for="exampleInputEmail1">Do you share personal
 							information with affiliates?</label>
 						<div class="radio">
 							<label> <input type="radio" name="sharepersonalinfo"
-								id="sharepersonalinfo" value="yes"> Yes
+								value="yes"> Yes
 							</label>
 						</div>
 						<div class="radio">
 							<label> <input type="radio" name="sharepersonalinfo"
-								id="sharepersonalinfo" value="no"> No
+								value="no"> No
 							</label>
 						</div>
 					</div>
@@ -307,619 +741,395 @@
 					</div>
 
 
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>Reasons you can share your customer's information</th>
-								<th>Do you share?</th>
-								<th>Can customer limit this sharing?</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>For everyday business purposes-such as to process
-									customer's transactions, maintain customer's account(s),
-									respond to court orders and legal investigations, or report to
-									credit bureaus</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="EverydayBusiness"
-											id="EverydayBusiness1" value="yes"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="EverydayBusiness"
-											id="EverydayBusiness2" value="no"> No
-										</label>
-									</div>
-								</td>
-								<td>
-
-									<div id="EverydayBusiness_limit_div">
-										<div class="radio">
-											<label> <input type="radio"
-												name="EverydayBusiness_limit" id="EverydayBusiness_limit"
-												value="yes"> Yes
-											</label>
-										</div>
-										<div class="radio">
-											<label> <input type="radio"
-												name="EverydayBusiness_limit" id="EverydayBusiness_limit"
-												value="no"> No
-											</label>
-										</div>
-									</div>
-									<div id="wedonotshare" style="display: none">
-										<span>We do not share</span>
-									</div> <script>
-										$("input[name='EverydayBusiness']")
-												.change(
-														function() {
-
-															if ($(this).val() == "no") {
-																$(
-																		"#wedonotshare")
-																		.show();
-																$(
-																		"#EverydayBusiness_limit_div")
-																		.hide();
-															} else {
-																$(
-																		"#wedonotshare")
-																		.hide();
-																$(
-																		"#EverydayBusiness_limit_div")
-																		.show();
-															}
-
-														});
-									</script>
-								</td>
-							</tr>
-							<tr>
-								<td>For marketing purposes-with service providers you use
-									to offer your products and services to customer</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>For joint marketing with other financial companies</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>For afiliate's everyday business purpose information
-									about your transactions and experiences</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td>For affiliates' everyday business purposes information
-									about your creditworthiness</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-							</tr>
-
-							<tr style="display: none" id="sharepersonalinfo">
-								<td>For our affiliates to market to customer</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td>For nonaffiliates to market to customer</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-								<td>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios1" value="option1"> Yes
-										</label>
-									</div>
-									<div class="radio">
-										<label> <input type="radio" name="optionsRadios"
-											id="optionsRadios2" value="option2"> No
-										</label>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
 
 					<div class="form-group">
-						<label for="exampleInputEmail1">Enter your phone number</label> <input
-							type="tel" class="form-control" id="exampleInputEmail1"
-							name="phoneNumber">
+						<label for="exampleInputEmail1">Is this privacy policy
+							jointly provided by two or more financial institutions?</label>
+						<div class="radio">
+							<label> <input type="radio" name="JointPolicy"
+								id="JointPolicy" value="yes"> Yes
+							</label>
+						</div>
+						<div class="radio">
+							<label> <input type="radio" name="JointPolicy"
+								id="JointPolicy" value="no"> No
+							</label>
+						</div>
 					</div>
+					<script>
+						$("input[name='JointPolicy']").change(function() {
 
+							if ($(this).val() == "yes") {
+								$("#Whoisprovidingthisnotice").show();
+							} else {
+								$("#Whoisprovidingthisnotice").hide();
+							}
+
+						});
+					</script>
+					<div class="form-group" id="Whoisprovidingthisnotice"
+						style="display: none;">
+						<label for="who">Who is providing this notice?</label> 
+						<textarea class="form-control" name="whoprovidenotice" row="4"></textarea>
+					</div>
 					<div class="form-group">
-						<label for="exampleInputEmail1">Enter your website domain
-							name</label> <input type="url" class="form-control"
-							id="exampleInputEmail1" name="websiteDomainName">
+						<label for="who">How do you protect user's personal
+							information?</label>
+						<textarea class="form-control" name="howprotectuserinfo" rows="3"></textarea>
 					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">How do you collect
+							user's personal information?</label>
 
-					<form role="form">
+
+						<div class="checkbox">
+							<label> <input type="checkbox" value="open an account"
+								name="openanaccount">open an account
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" value="deposit money"
+								name="depositmoney">deposit money
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" value="pay your bills"
+								name="payyourbills">pay your bills
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" value="apply for a loan"
+								name="applyforaloan">apply for a loan
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="use your credit or debit card"
+								name="useyourcreditordebitcard">use your credit or debit
+								card
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="seek financial or tax advice"
+								name="seekfinancialortaxadvice">seek financial or tax
+								advice
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="apply for insurance" name="applyforinsurance">apply
+								for insurance
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="pay insurance premiums" name="payinsurancepremiums">pay
+								insurance premiums
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="file an insurance claim" name="fileaninsuranceclaim">file
+								an insurance claim
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="seek advice about your investments"
+								name="seekadviceaboutyourinvestments">seek advice about
+								your investments
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="buy securities from us" name="buysecuritiesfromus">buy
+								securities from us
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="sell securities to us" name="sellsecuritiestous">sell
+								securities to us
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="direct us to buy securities"
+								name="directustobuysecurities">direct us to buy
+								securities
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="direct us to sell your securities"
+								name="directustosellyoursecurities">direct us to sell
+								your securities
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="make deposits or withdrawals from your account"
+								name="makedepositsorwithdrawalsfromyouraccount">make
+								deposits or withdrawals from your account
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="enter into an investment advisory contract"
+								name="enterintoaninvestmentadvisorycontract">enter into
+								an investment advisory contract
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="give us your income information"
+								name="giveusyourincomeinformation">give us your income
+								information
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="provide employment information"
+								name="provideemploymentinformation">provide employment
+								information
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="give us your employment history"
+								name="giveusyouremploymenthistory">give us your
+								employment history
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="tell us about your investment or retirement portfolio"
+								name="tellusaboutyourinvestmentorretirementportfolio">tell
+								us about your investment or retirement portfolio
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="tell us about your investment or retirement earnings"
+								name="tellusaboutyourinvestmentorretirementearnings">tell
+								us about your investment or retirement earnings
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="apply for financing" name="applyforfinancing">apply
+								for financing
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" value="apply for a lease"
+								name="applyforalease">apply for a lease
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="provide account information"
+								name="provideaccountinformation">provide account
+								information
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="give us your contact information"
+								name="giveusyourcontactinformation">give us your contact
+								information
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" value="pay us by check"
+								name="payusbycheck">pay us by check
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="give us your wage statements"
+								name="giveusyourwagestatements">give us your wage
+								statements
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="provide your mortgage information"
+								name="provideyourmortgageinformation">provide your
+								mortgage information
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="make a wire transfer" name="makeawiretransfer">make
+								a wire transfer
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="tell us who receives the money"
+								name="telluswhoreceivesthemoney">tell us who receives
+								the money
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="tell us where to send the money"
+								name="telluswheretosendthemoney">tell us where to send
+								the money
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="show your government-issued ID"
+								name="showyourgovernment-issuedID">show your
+								government-issued ID
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="show your driver’s license"
+								name="showyourdriver’slicense">show your driver’s
+								license
+							</label>
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox"
+								value="order a commodity futures or option trade"
+								name="orderacommodityfuturesoroptiontrade">order a
+								commodity futures or option trade
+							</label>
+						</div>
+
+
 						<div class="form-group">
-							<label for="exampleInputEmail1">Is this privacy policy
-								jointly provided by two or more financial institutions?</label>
+							<label for="exampleInputPassword1">Do you collect
+								information from affiliates and/or credit bureaus?</label>
 							<div class="radio">
-								<label> <input type="radio" name="JointPolicy"
-									id="JointPolicy" value="yes"> Yes
+								<label> <input type="radio"
+									name="AffiliatesandCreditBureaus"
+									id="AffiliatesandCreditBureaus" value="yes"> Yes
 								</label>
 							</div>
 							<div class="radio">
-								<label> <input type="radio" name="JointPolicy"
-									id="JointPolicy" value="no"> No
+								<label> <input type="radio"
+									name="AffiliatesandCreditBureaus"
+									id="AffiliatesandCreditBureaus" value="no"> No
 								</label>
 							</div>
 						</div>
 						<script>
-							$("input[name='JointPolicy']").change(function() {
+							$("input[name='AffiliatesandCreditBureaus']")
+									.change(function() {
 
-								if ($(this).val() == "yes") {
-									$("#Whoisprovidingthisnotice").show();
-								} else {
-									$("#Whoisprovidingthisnotice").hide();
-								}
+										if ($(this).val() == "yes") {
+											$("#Shareinfowithcompany").hide();
+										} else {
+											$("#Shareinfowithcompany").show();
+										}
 
-							});
+									});
 						</script>
-						<div class="form-group" id="Whoisprovidingthisnotice"
+						
+						
+						<div class="form-group" id="Shareinfowithcompany"
 							style="display: none;">
-							<label for="who">Who is providing this notice?</label> <input
-								type="text" class="form-control" id="who">
+							<label for="exampleInputPassword1">Do you collect
+								information from companies?</label>
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" checked> Yes
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios2" value="option2"> No
+								</label>
+							</div>
 						</div>
+
+
+
 						<div class="form-group">
-							<label for="who">How do you protect user's personal
-								information?</label>
-							<textarea class="form-control" rows="3"></textarea>
+							<label for="why">Are you going to describe state privacy
+								law previous in "Other important information" section?</label>
+							<div class="radio">
+								<label> <input type="radio" name="desotherimportinfo"
+									id="optionsRadios1" value=yes> Yes
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="desotherimportinfo"
+									id="optionsRadios2" value="no"> No
+								</label>
+							</div>
 						</div>
+						
+						
 						<div class="form-group">
-							<label for="exampleInputPassword1">How do you collect
-								user's personal information?</label>
+							<label for="exampleInputPassword1">Do you provide opt-out form</label>
+							<div class="radio">
+								<label> <input type="radio"
+									name="provideoptoutform"
+									id="provideoptoutform" value="yes"> Yes
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio"
+									name="provideoptoutform"
+									id="provideoptoutform" value="no"> No
+								</label>
+							</div>
+						</div>
+						<script>
+							$("input[name='provideoptoutform']")
+									.change(function() {
 
+										if ($(this).val() == "no") {
+											$("#whathappenlimitsharing").hide();
+										} else {
+											$("#whathappenlimitsharing").show();
+										}
 
-							<div class="checkbox">
-								<label> <input type="checkbox" value="open an account"
-									name="openanaccount">open an account
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox" value="deposit money"
-									name="depositmoney">deposit money
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox" value="pay your bills"
-									name="payyourbills">pay your bills
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox" value="apply for a loan"
-									name="applyforaloan">apply for a loan
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="use your credit or debit card"
-									name="useyourcreditordebitcard">use your credit or
-									debit card
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="seek financial or tax advice"
-									name="seekfinancialortaxadvice">seek financial or tax
-									advice
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="apply for insurance" name="applyforinsurance">apply
-									for insurance
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="pay insurance premiums" name="payinsurancepremiums">pay
-									insurance premiums
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="file an insurance claim" name="fileaninsuranceclaim">file
-									an insurance claim
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="seek advice about your investments"
-									name="seekadviceaboutyourinvestments">seek advice about
-									your investments
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="buy securities from us" name="buysecuritiesfromus">buy
-									securities from us
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="sell securities to us" name="sellsecuritiestous">sell
-									securities to us
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="direct us to buy securities"
-									name="directustobuysecurities">direct us to buy
-									securities
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="direct us to sell your securities"
-									name="directustosellyoursecurities">direct us to sell
-									your securities
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="make deposits or withdrawals from your account"
-									name="makedepositsorwithdrawalsfromyouraccount">make
-									deposits or withdrawals from your account
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="enter into an investment advisory contract"
-									name="enterintoaninvestmentadvisorycontract">enter into
-									an investment advisory contract
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="give us your income information"
-									name="giveusyourincomeinformation">give us your income
-									information
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="provide employment information"
-									name="provideemploymentinformation">provide employment
-									information
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="give us your employment history"
-									name="giveusyouremploymenthistory">give us your
-									employment history
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="tell us about your investment or retirement portfolio"
-									name="tellusaboutyourinvestmentorretirementportfolio">tell
-									us about your investment or retirement portfolio
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="tell us about your investment or retirement earnings"
-									name="tellusaboutyourinvestmentorretirementearnings">tell
-									us about your investment or retirement earnings
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="apply for financing" name="applyforfinancing">apply
-									for financing
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox" value="apply for a lease"
-									name="applyforalease">apply for a lease
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="provide account information"
-									name="provideaccountinformation">provide account
-									information
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="give us your contact information"
-									name="giveusyourcontactinformation">give us your
-									contact information
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox" value="pay us by check"
-									name="payusbycheck">pay us by check
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="give us your wage statements"
-									name="giveusyourwagestatements">give us your wage
-									statements
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="provide your mortgage information"
-									name="provideyourmortgageinformation">provide your
-									mortgage information
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="make a wire transfer" name="makeawiretransfer">make
-									a wire transfer
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="tell us who receives the money"
-									name="telluswhoreceivesthemoney">tell us who receives
-									the money
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="tell us where to send the money"
-									name="telluswheretosendthemoney">tell us where to send
-									the money
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="show your government-issued ID"
-									name="showyourgovernment-issuedID">show your
-									government-issued ID
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="show your driver’s license"
-									name="showyourdriver’slicense">show your driver’s
-									license
-								</label>
-							</div>
-							<div class="checkbox">
-								<label> <input type="checkbox"
-									value="order a commodity futures or option trade"
-									name="orderacommodityfuturesoroptiontrade">order a
-									commodity futures or option trade
-								</label>
-							</div>
+									});
+						</script>
+						
 
-
-							<div class="form-group">
-								<label for="exampleInputPassword1">Do you collect
-									information from affiliates and/or credit bureaus?</label>
-								<div class="radio">
-									<label> <input type="radio"
-										name="AffiliatesandCreditBureaus"
-										id="AffiliatesandCreditBureaus" value="yes"> Yes
-									</label>
-								</div>
-								<div class="radio">
-									<label> <input type="radio"
-										name="AffiliatesandCreditBureaus"
-										id="AffiliatesandCreditBureaus" value="no"> No
-									</label>
-								</div>
+						<div class="form-group" id="whathappenlimitsharing" style="display:none">
+							<label for="why">What happens when users limit sharing
+								for an account that is jointly held with someone else?</label>
+							<div class="radio">
+								<label> <input type="radio" name="whathappenlimitsharing"
+									id="optionsRadios1" value="Your
+									choices apply to everyone on the account"> Your
+									choices apply to everyone on the account
+								</label>
 							</div>
-							<script>
-								$("input[name='AffiliatesandCreditBureaus']")
-										.change(
-												function() {
-
-													if ($(this).val() == "yes") {
-														$(
-																"#Shareinfowithcompany")
-																.hide();
-													} else {
-														$(
-																"#Shareinfowithcompany")
-																.show();
-													}
-
-												});
-							</script>
-							<div class="form-group" id="Shareinfowithcompany"
-								style="display: none;">
-								<label for="exampleInputPassword1">Do you collect
-									information from companies?</label>
-								<div class="radio">
-									<label> <input type="radio" name="optionsRadios"
-										id="optionsRadios1" value="option1" checked> Yes
-									</label>
-								</div>
-								<div class="radio">
-									<label> <input type="radio" name="optionsRadios"
-										id="optionsRadios2" value="option2"> No
-									</label>
-								</div>
+							<div class="radio">
+								<label> <input type="radio" name="whathappenlimitsharing"
+									id="optionsRadios2" value="Your choices will
+									apply to everyone on the account - unless you tell us otherwise"> Your choices will
+									apply to everyone on the account - unless you tell us otherwise
+								</label>
 							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputEmail1"> Provide information
+								about state laws below</label>
+							<textarea class="form-control" name="statelawsbelow" rows="10"></textarea>
+						</div>
 
 
 
-							<div class="form-group">
-								<label for="why">Are you going to describe state privacy
-									law previous in "Other important information" section?</label>
-								<div class="radio">
-									<label> <input type="radio" name="optionsRadios"
-										id="optionsRadios1" value="option1" checked> Yes
-									</label>
-								</div>
-								<div class="radio">
-									<label> <input type="radio" name="optionsRadios"
-										id="optionsRadios2" value="option2"> No
-									</label>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="why">What happens when users limit sharing
-									for an account that is jointly held with someone else?</label>
-								<div class="radio">
-									<label> <input type="radio" name="optionsRadios"
-										id="optionsRadios1" value="option1" checked> Your
-										choices apply to everyone on the account
-									</label>
-								</div>
-								<div class="radio">
-									<label> <input type="radio" name="optionsRadios"
-										id="optionsRadios2" value="option2"> Your choices will
-										apply to everyone on the account - unless you tell us
-										otherwise
-									</label>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Provide information
-									about state laws below</label>
-								<textarea class="form-control" rows="10"></textarea>
-							</div>
-
-
-
-							<hr>
-							<button type="submit" name="preview" class="btn btn-default">Finish
-								and Preview</button>
-							<button type="submit" name="saveforlater" class="btn btn-default">Save
-								for later</button>
-					</form>
-				</div>
+						<hr>
+						<button type="submit" name="preview" class="btn btn-default">Finish
+							and Preview</button>
+						<button type="submit" name="saveforlater" class="btn btn-default">Save
+							for later</button>
+			</form>
 		</div>
+	</div>
 </body>
 </html>

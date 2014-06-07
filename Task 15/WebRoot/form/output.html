@@ -74,8 +74,8 @@
 			<tr>
 				<th class="colorclass" id="centertext">Reasons we can share
 					your personal information</th>
-				<th class="colorclass" id="centertext">Does [name of financial
-					institution] share?</th>
+				<th class="colorclass" id="centertext">Does&nbsp;<span
+						id="nameofinstitution"></span>&nbsp;share?</th>
 				<th class="colorclass" id="centertext">Can you limit this
 					sharing?</th>
 			</tr>
@@ -84,54 +84,45 @@
 					as to process your transactions, maintain your account(s), respond
 					to court orders and legal investigations, or report to credit
 					bureaus</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">No</td>
+				<td id="EverydayBusiness"></td>
+				<td id="EverydayBusiness_limit"></td>
 			</tr>
 			<tr>
 				<td id="centertext">For our marketing purposes - with service
 					providers we use to offer our products and services to you (please
 					see below to limit the ways we contact you)</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">No</td>
+				<td id="marketpurpose"></td>
+				<td id="marketpurpose_limit"></td>
 			</tr>
 			<tr>
 				<td id="centertext">For joint marketing with other financial
 					companies</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">No</td>
+				<td id="jointmarket">Yes</td>
+				<td id="jointmarket_limit">No</td>
 			</tr>
 			<tr>
 				<td id="centertext">For our affiliates&acute; everyday business
 					purposes - Information about your transactions and experiences</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">No</td>
+				<td id="affeverydaybusi"></td>
+				<td id="affeverydaybusi_limit"></td>
 			</tr>
 			<tr>
 				<td id="centertext">For our affiliates&acute; everyday business
 					purposes - Information about your creditworthiness</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">Yes</td>
+				<td id="creditworth"></td>
+				<td id="creditworth_limit"></td>
+			</tr>
+
+			<tr>
+				<td id="centertext">For our affiliate to market to you</td>
+				<td id="afftomarket"></td>
+				<td id="afftomarket_limit"></td>
 			</tr>
 			<tr>
-				<td id="centertext">For nonaffiliates to market to you - for
-					all credit card accounts</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">Yes</td>
-			</tr>
-			<tr>
-				<td id="centertext">For nonaffiliates to market to you - for
-					accounts and services endorsed by another organization (e.g., debit
-					card co-branded with a baseball team) &quot;Sponsored
-					Accounts&quot;</td>
-				<td id="centertext">Yes</td>
-				<td id="centertext">Yes</td>
-			</tr>
-			<tr>
-				<td id="centertext">For nonaffiliates to market to you - for
-					accounts other than credit card accounts and Sponsored Accounts,
-					such as insurance, investments, deposit and lending</td>
-				<td id="centertext">No</td>
-				<td id="centertext">We don&acute;t share</td>
+				<td id="centertext">For nonafﬁliates to market to you 
+				</td>
+				<td id="nonafftomarket"></td>
+				<td id="nonafftomarket_limit">We don&acute;t share</td>
 			</tr>
 		</table>
 
@@ -143,9 +134,9 @@
 					<td class="colorclass" id="leftcol">To limit our sharing</td>
 					<td>
 						<ul>
-							<li>Call [phone number] - our menu will prompt you through
+							<li>Call <span id="phoneNumber"></span> - our menu will prompt you through
 								your choice(s) or</li>
-							<li>Visit us online: [Website]</li>
+							<li>Visit us online: <span id="websiteDomainName"></span></li>
 						</ul> <strong>Please note:</strong><br> If you are a new customer,
 						we can begin sharing your information 45 days from the date we
 						sent this notice. When you are no longer our customer, we continue
@@ -162,11 +153,13 @@
 				</tr>
 				<tr>
 					<td class="colorclass" id="leftcol">Quesitons?</td>
-					<td>Call [phone number] or go to [website]</td>
+					<td>Call <span id="phoneNumber"></span> or go to <span id="websiteDomainName"></span></td>
 				</tr>
 			</tbody>
 		</table>
 		<br> <br>
+		
+		<div id="JointPolicy" >
 		<table border="1" cellpadding="10" class="table3">
 			<thead>
 				<tr>
@@ -177,8 +170,10 @@
 			<tbody>
 				<tr>
 					<td id="leftcolpage2">Who is providing this notice</td>
-					<td>[insert]</td>
+					<td id="whoprovidenotice"></td>
 		</table>
+		</div>
+		
 		<br> <br>
 		<table border="1" cellpadding="10" class="table3">
 			<thead>
@@ -189,16 +184,16 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td id="leftcolpage2">How does [name of inst] my personal
+					<td id="leftcolpage2">How does&nbsp;<span id="nameofinstitution"></span>&nbsp;my personal
 						information?</td>
 					<td>To protect your personal information from unauthorized
 						access and use, we use security measures that comply with federal
 						law. These measures include computer safeguards and secured files
-						and buildings. <br>[insert]
+						and buildings. <br><span id="howprotectuserinfo"></span>
 					</td>
 				</tr>
 				<tr>
-					<td id="leftcolpage2">How does [name of inst] collect my
+					<td id="leftcolpage2">How does <span id="nameofinstitution"></span> collect my
 						personal information?</td>
 					<td>We collect your personal information, for example, when
 						you: <br>
@@ -239,7 +234,8 @@
 
 					</td>
 				</tr>
-				<tr>
+				
+				<tr >
 					<td id="leftcolpage2">Why can’t I limit all sharing?</td>
 					<td>Federal law gives you the right to limit some but not all
 						sharing related to:
@@ -250,18 +246,21 @@
 							</li>
 							<li>nonaffiliates to market to you</li>
 						</ul> State laws and individual companies may give you more rights to
-						limit sharing. <br> [See Other important information section
-						for your rights under state law.]
+						limit sharing. <br> <span id="desotherimportinfo">See Other important information section
+						for your rights under state law.</span>
 					</td>
 				</tr>
+				
+				
+
 				<tr>
 					<td id="leftcolpage2">What happens when I limit sharing for an
 						account I hold jointly with someone else?</td>
-					<td>[Your choice will apply to everyone on your account] <br>OR<br>
-						[Your choice will apply to everyone on your account - unless you
-						tell us otherwise]
+					<td><span id="whathappenlimitsharing"></span>
 					</td>
 				</tr>
+				
+				</tbody>
 		</table>
 
 		<br> <br>
@@ -306,7 +305,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>[blah blah blah]</td>
+					<td><span id="statelawsbelow"></span></td>
 				</tr>
 		</table>
 	</div>

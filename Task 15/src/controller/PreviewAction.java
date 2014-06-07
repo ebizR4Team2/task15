@@ -8,6 +8,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import parser.Html;
 import parser.MyZip;
 import parser.XmlParser;
@@ -47,7 +50,22 @@ public class PreviewAction extends Action {
 		try {
 			System.out.println(hp.get("nameofinstitution"));
 			Html ht = new Html("output.html", request);
+
+		
 			
+			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
+				hp.put("JointPolicy", "");
+			} else {
+				hp.remove("JointPolicy");
+			}
+			
+			if (hp.get("desotherimportinfo") != null && hp.get("desotherimportinfo").equals("no") ) {
+				hp.put("desotherimportinfo", "");
+			} else {
+				hp.remove("desotherimportinfo");
+			}
+			
+
 			for (String key: hp.keySet()) {
 				ht.setContent(key, hp.get(key));
 			}
@@ -77,5 +95,4 @@ public class PreviewAction extends Action {
 		
 		return "preview.jsp";
 	}
-
 }
