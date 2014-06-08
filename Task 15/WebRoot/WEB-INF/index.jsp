@@ -198,7 +198,19 @@
 							transfer instructions
 						</label>
 					</div>
-
+					
+					<div class="form-group">
+						<label for="exampleInputPassword1">Do you want to use the word "memember" or "customer"?</label>
+						<div class="radio">
+							<label> <input type="radio" name="haveaffiliate"
+								id="useMemberOrNot1" value="yes" ${useMemberOrNot}> Member
+							</label>
+						</div>
+						<div class="radio">
+							<label> <input type="radio" name="haveaffiliate"
+								id="useMemberOrNot2" value="no" ${useMemberOrNot}> Customer
+							</label>
+					</div>
 
 
 					<div class="form-group">
