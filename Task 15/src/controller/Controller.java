@@ -76,7 +76,7 @@ public class Controller extends HttpServlet {
 	   		return;
     	}
     	
-    	if (nextPage.endsWith(".zip")) {
+    	if (nextPage.endsWith(".zip") || nextPage.endsWith(".html")) {
     		response.sendRedirect("form/" + nextPage);
 	   		return;
     	}

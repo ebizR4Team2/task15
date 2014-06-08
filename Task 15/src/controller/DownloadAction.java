@@ -36,11 +36,12 @@ public class DownloadAction extends Action {
 		String userid = (String) request.getSession().getAttribute("userid");;
 		try {
 			ArrayList<File> list = new ArrayList<File>();
-			MyZip zip = new MyZip(userid + "temp.zip", request);
-			list.add(new File(filePath + userid + "temp.xml"));
-			list.add(new File(filePath + userid + "output.html"));
+			MyZip zip = new MyZip(userid + "PrivacyPolicyZip.zip", request);
+			list.add(new File(filePath + userid + "PrivacyPolicyXml.xml"));
+			list.add(new File(filePath + userid + "PrivacyPolicyHtml.html"));
+			list.add(new File(filePath + userid + "PrivacyPolicyOptout_online.html"));
 			list.add(new File(filePath + "style.css"));
-			File newZip = zip.compressFiles(list, filePath + userid + "temp.zip");
+			File newZip = zip.compressFiles(list, filePath + userid + "PrivacyPolicyZip.zip");
 			return newZip.getName();
 		} catch (Exception e) {
 			e.printStackTrace();

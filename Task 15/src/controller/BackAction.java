@@ -104,7 +104,7 @@ public class BackAction extends Action {
 		
 		try {
 			XmlParser xml = new XmlParser();
-			HashMap<String, String> map = xml.importXml(new File(filePath2 + "temp.xml"));
+			HashMap<String, String> map = xml.importXml(new File(filePath2 + "PrivacyPolicyXml.xml"));
 			Iterator<Entry<String, String>> itr = map.entrySet().iterator();
 			while (itr.hasNext()) {
 				Entry<String, String> entry = itr.next();

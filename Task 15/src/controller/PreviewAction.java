@@ -37,7 +37,7 @@ public class PreviewAction extends Action {
 		File newXmlFile;
 		HashMap<String, String> hp = new HashMap<String, String>();
 		try {
-			newXmlFile = xml.saveXml(request, userid + "temp.xml");
+			newXmlFile = xml.saveXml(request, userid + "PrivacyPolicyXml.xml");
 			hp = xml.importXml(newXmlFile);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -51,12 +51,12 @@ public class PreviewAction extends Action {
 		while (filePath.charAt(index) != '/') {
 			index--;
 		}
-		filePath.replace(index+1, filePath.length(), "form/" + userid + "output.html");
+		filePath.replace(index+1, filePath.length(), "form/" + userid + "PrivacyPolicyHtml.html");
 		request.setAttribute("previewUrl", filePath);
 
 		try {
 			System.out.println(hp.get("nameofinstitution"));
-			Html ht = new Html("output.html", request);
+			Html ht = new Html("PrivacyPolicyHtml.html", request);
 
 			
 			if(hp.get("nameofinstitution") != null) {
@@ -85,8 +85,8 @@ public class PreviewAction extends Action {
 			
 			
 			
-			ht.generateLink("optoutonlineform", userid + "optout_online.html", "opt out form");
-			ht.generateLink("optoutonlineform1", userid + "optout_online.html", "opt out form");
+			ht.generateLink("optoutonlineform", userid + "PrivacyPolicyOptout_online.html", "opt out form");
+			ht.generateLink("optoutonlineform1", userid + "PrivacyPolicyOptout_online.html", "opt out form");
 			
 			
 			/**
@@ -221,7 +221,7 @@ public class PreviewAction extends Action {
 			for (String key: hp.keySet()) {
 				ht.setContent(key, hp.get(key));
 			}
-			ht.makeHtmlByDoc(userid + "output.html");
+			ht.makeHtmlByDoc(userid + "PrivacyPolicyHtml.html");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -232,9 +232,9 @@ public class PreviewAction extends Action {
 		try {
 			if (request.getParameter("saveforlater") != null) {
 				ArrayList<File> list = new ArrayList<File>();
-				MyZip zip = new MyZip(userid + "temp.zip", request);
-				list.add(new File(filePath2 + "temp.xml"));
-				File newZip = zip.compressFiles(list, filePath2 + "temp.zip");
+				MyZip zip = new MyZip(userid + "PrivacyPolicyZip.zip", request);
+				list.add(new File(filePath2 + "PrivacyPolicyXml.xml"));
+				File newZip = zip.compressFiles(list, filePath2 + "PrivacyPolicyZip.zip");
 				return newZip.getName();
 			}
 			
