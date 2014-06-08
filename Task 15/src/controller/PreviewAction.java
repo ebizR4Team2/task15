@@ -70,10 +70,15 @@ public class PreviewAction extends Action {
 				hp.put("phoneNumber1", hp.get("phoneNumber"));
 			}
 			
-//			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
-//				//hp.put("JointPolicy", "");
-//				ht.removeRow("JointPolicy_row");
-//			}  
+			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
+				hp.put("JointPolicy", "");
+			}  
+			
+			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("yes")) {
+				hp.remove("JointPolicy");
+			}
+			
+			
 			
 			
 			ht.generateLink("optoutonlineform", userid + "optout_online.html", "opt out form");
@@ -130,6 +135,7 @@ public class PreviewAction extends Action {
 			
 			if (hp.get("haveaffiliate") != null && hp.get("haveaffiliate").equals("no")) {
 				hp.put("whoareyouraffiliates", hp.get("nameofinstitution") + " has no affiliates");
+				ht.removeRow("affiliate_td");
 			} else if (hp.get("haveaffiliate") != null && hp.get("sharepersonalinfo") != null 
 					&& hp.get("haveaffiliate").equals("yes") && hp.get("sharepersonalinfo").equals("no")) {
 				String whoareyouraffiliates = hp.get("nameofinstitution") + " does not share with our affiliates";
