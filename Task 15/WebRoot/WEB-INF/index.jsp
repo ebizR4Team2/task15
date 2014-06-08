@@ -1275,7 +1275,7 @@
 								</label>
 							</div>
 						</div>
-						<!-- 
+						
 						<div class="form-group" id="opt-out-types">
 							<label>What types of opt-out do you want to provide?</label>
 		
@@ -1298,20 +1298,20 @@
 								</label>
 							</div>
 						</div>
-						 -->
+						 
 						
 						<script>
 							if ($("#hidden_provideoptoutform").val() == "checked") {
 								$("#whathappenlimitsharing").show();
-								//$("#opt-out-types").show();
+								$("#opt-out-types").show();
 							}
 							$("input[name='provideoptoutform']").change(function() {
 								if ($(this).val() == "no") {
 									$("#whathappenlimitsharing").hide();
-									//$("#opt-out-types").hide();
+									$("#opt-out-types").hide();
 								} else {
 									$("#whathappenlimitsharing").show();
-									//$("#opt-out-types").show();
+									$("#opt-out-types").show();
 								}
 							});
 						</script>
