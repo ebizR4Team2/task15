@@ -30,8 +30,8 @@
 			<a href="${requestScope.previewUrl}" target="_blank">Click here to view it in browser</a>
 			<br>
 			<br>
-			<button type="submit" class="btn btn-default">Back to edit</button>
-			<a href="download.do"><button type="" class="btn btn-default">Download</button></a>
+			<a href="back.do"><button class="btn btn-default">Back to edit</button></a>
+			<a href="download.do"><button class="btn btn-default">Download</button></a>
 		</div>
 
 	</div>
