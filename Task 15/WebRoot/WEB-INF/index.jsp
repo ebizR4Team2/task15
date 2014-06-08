@@ -1234,7 +1234,7 @@
 							</div>
 						</div>
 
-
+<!-- 
 						<div class="form-group">
 							<label for="exampleInputPassword1">Do you provide opt-out
 								form</label>
@@ -1254,9 +1254,11 @@
 								type="hidden" id="hidden_provideoptoutform"
 								value="${provideoptoutformY}">
 						</div>
+						
+ -->
+						<input type="hidden" name="provideoptoutform" value="yes">
 
-						<div class="form-group" id="whathappenlimitsharing"
-							style="display: none">
+						<div class="form-group" id="whathappenlimitsharing">
 							<label for="why">What happens when users limit sharing
 								for an account that is jointly held with someone else?</label>
 							<div class="radio">
