@@ -66,6 +66,14 @@ public class PreviewAction extends Action {
 				hp.put("memberorcustomer1", hp.get("memberorcustomer"));
 			}
 			
+			if (hp.get("phoneNumber") != null) {
+				hp.put("phoneNumber1", hp.get("phoneNumber"));
+			}
+			
+			if (hp.get("websiteDomainName") != null) {
+				hp.put("websiteDomainName1", hp.get("websiteDomainName"));
+			}
+			
 			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
 				hp.put("JointPolicy", "");
 			} else {
