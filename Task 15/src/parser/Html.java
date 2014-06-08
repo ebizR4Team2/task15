@@ -2,6 +2,7 @@ package parser;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -53,9 +54,18 @@ public class Html {
 	 */
 	public String generateLink(String id, String link, String text) {
 		Element element = doc.getElementById(id);
-		element.appendText("<a href=\"" + filePath + link + "\" target=\"_blank\">" + text
-				+ "</a>");
+		element.attr("href", link);
+		element.appendText(text);
 		return id;
+	}
+	
+	/**
+	 * remove Row with certain id
+	 * @param id
+	 */
+	public void removeRow(String id) {
+		Element tr = doc.select("tr[id=" + id + "]").first();
+		tr.remove();
 	}
 
 	/**

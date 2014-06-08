@@ -70,15 +70,13 @@ public class PreviewAction extends Action {
 				hp.put("phoneNumber1", hp.get("phoneNumber"));
 			}
 			
-			if (hp.get("websiteDomainName") != null) {
-				hp.put("websiteDomainName1", hp.get("websiteDomainName"));
-			}
-			
 			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
 				hp.put("JointPolicy", "");
 			} else {
 				hp.remove("JointPolicy");
 			}
+			ht.generateLink("optoutonlineform", userid + "optout_online.html", "opt out form");
+			ht.generateLink("optoutonlineform1", userid + "optout_online.html", "opt out form");
 			
 			
 			/**
@@ -212,7 +210,6 @@ public class PreviewAction extends Action {
 			for (String key: hp.keySet()) {
 				ht.setContent(key, hp.get(key));
 			}
-			
 			ht.makeHtmlByDoc(userid + "output.html");
 		} catch (IOException e) {
 			e.printStackTrace();
