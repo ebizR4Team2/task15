@@ -118,8 +118,7 @@ public class PreviewAction extends Action {
 			}
 			
 			if (hp.get("whathappenlimitsharing") != null && hp.get("whathappenlimitsharing").equals("no")) {
-				hp.put("whathappenlimitsharing", "Your choices will apply to everyone on the account - unless you tell us otherwise");
-				
+				hp.put("whathappenlimitsharing", "Your choices apply to everyone on the account");
 			}
 			
 			
@@ -171,7 +170,6 @@ public class PreviewAction extends Action {
 			}
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
