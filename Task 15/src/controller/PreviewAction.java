@@ -147,17 +147,17 @@ public class PreviewAction extends Action {
 			}
 			
 			/**
-			 * opt-out
+			 * display what kinds of opt-out form
 			 * */
 			
-			if (hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("no")) {
-				System.out.println("provideoptoutform no");
+			if (hp.get("opt-out-mail") == null) {
 				hp.put("provideoptoutform", "");
-			} else if(hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("yes")){
-				
-				System.out.println("provideoptoutform yes");
+			} else if(hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("mail")){
 				hp.remove("provideoptoutform");
-				
+			}
+			
+			if (hp.get("additionalinfoacct") != null && hp.get("additionalinfoacct").equals("yes")) {
+				hp.put("additionalinfoacct_opt", "Account#");
 			}
 			
 			/**
