@@ -277,6 +277,8 @@
 												name="EverydayBusiness_limit" id="EverydayBusiness_limit"
 												value="Yes" ${EverydayBusiness_limitY}> Yes
 											</label>
+											<input type="hidden" id="hidden_EverydayBusiness_limit"
+											value="${EverydayBusiness_limitY}">
 										</div>
 										<div class="radio">
 											<label> <input type="radio"
@@ -350,6 +352,8 @@
 												name="marketpurpose_limit" id="optionsRadios1" value="Yes"
 												${marketpurpose_limitY}> Yes
 											</label>
+											<input type="hidden" id="hidden_marketpurpose_limit"
+											value="${marketpurpose_limitY}">
 										</div>
 										<div class="radio">
 											<label> <input type="radio"
@@ -423,6 +427,8 @@
 												id="optionsRadios1" value="Yes" ${jointmarket_limitY}>
 												Yes
 											</label>
+											<input type="hidden" id="hidden_jointmarket_limit"
+											value="${jointmarket_limitY}">
 
 										</div>
 										<div class="radio">
@@ -495,6 +501,8 @@
 												name="affeverydaybusi_limit" id="optionsRadios1" value="Yes"
 												${affeverydaybusi_limitY}> Yes
 											</label>
+											<input type="hidden" id="hidden_affeverydaybusi_limit"
+											value="${affeverydaybusi_limitY}">
 										</div>
 										<div class="radio">
 											<label> <input type="radio"
@@ -653,6 +661,7 @@
 												id="optionsRadios1" value="Yes" ${afftomarket_limitY}>
 												Yes
 											</label>
+											
 										</div>
 										<div class="radio">
 											<label> <input type="radio" name="afftomarket_limit"
@@ -726,7 +735,9 @@
 												name="nonafftomarket_limit" id="optionsRadios1" value="Yes"
 												${nonafftomarket_limitY}> Yes
 											</label>
-										</div>
+											<input type="hidden" id="hidden_nonafftomarket_limitY" 
+											value="${nonafftomarket_limitY}">
+											</div>
 										<div class="radio">
 											<label> <input type="radio"
 												name="nonafftomarket_limit" id="optionsRadios2" value="No"
@@ -737,6 +748,11 @@
 									<div id="wedonotshare7" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
+									if ($("#hidden_nonafftomarket_limitY").val() == "checked") {
+										$("#nonafftomarket_limit_div")
+												.show();
+										$("#wedonotshare7").hide();
+									}
 										if ($("#hidden_nonafftomarket").val() == "checked") {
 											$("#nonafftomarket_limit_div")
 													.show();
@@ -1336,6 +1352,19 @@
 						</div>
 
 						<script>
+						
+						if ($("#hidden_nonafftomarket_limitY").val() == "checked"
+								|| $("#hidden_marketpurpose_limit").val() == "checked"
+								|| $("#hidden_jointmarket_limit").val() == "checked"
+								|| $("#hidden_affeverydaybusi_limit").val() == "checked"
+								|| $("#hidden_creditworth").val() == "checked"
+								|| $("#hidden_afftomarket_limit").val() == "checked"
+								|| $("#hidden_nonafftomarket_limitY").val() == "checked") {
+							$("#whathappenlimitsharing").show();
+							$("#opt-out-types").show();
+							$("#additionalinfoacct").show();
+						}
+						
 							$("input[name='EverydayBusiness_limit']")
 									.change(
 											function() {
