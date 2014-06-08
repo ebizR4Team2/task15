@@ -57,6 +57,7 @@ public class PreviewAction extends Action {
 		try {
 			System.out.println(hp.get("nameofinstitution"));
 			Html ht = new Html("PrivacyPolicyHtml.html", request);
+			Html ht2 = new Html("PrivacyPolicyOptout_online.html", request);
 
 			
 			if(hp.get("nameofinstitution") != null) {
@@ -222,6 +223,7 @@ public class PreviewAction extends Action {
 				ht.setContent(key, hp.get(key));
 			}
 			ht.makeHtmlByDoc(userid + "PrivacyPolicyHtml.html");
+			ht2.makeHtmlByDoc(userid + "PrivacyPolicyOptout_online.html");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
