@@ -221,6 +221,7 @@ public class PreviewAction extends Action {
 
 			for (String key: hp.keySet()) {
 				ht.setContent(key, hp.get(key));
+				ht2.setContent(key, hp.get(key));
 			}
 			ht.makeHtmlByDoc(userid + "PrivacyPolicyHtml.html");
 			ht2.makeHtmlByDoc(userid + "PrivacyPolicyOptout_online.html");
