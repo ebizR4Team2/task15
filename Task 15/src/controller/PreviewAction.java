@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.taglibs.standard.lang.jstl.NullLiteral;
 
 import parser.Html;
 import parser.MyZip;
@@ -111,27 +112,41 @@ public class PreviewAction extends Action {
 			 * opt-out options
 			 * */
 			
+			if (hp.get("whathappenlimitsharing") != null && hp.get("whathappenlimitsharing").equals("yes")) {
+				hp.put("whathappenlimitsharing", "Your choices will apply to everyone on the account - unless you tell us otherwise");
+				hp.put("optout_whathappenlimitsharing", "If you have a joint account, your choice(s) will apply to everyone on your account unless you mark below " + StringEscapeUtils.unescapeHtml4("&#x25a2;") + "Apply my choices only to me");
+			}
+			
+			if (hp.get("whathappenlimitsharing") != null && hp.get("whathappenlimitsharing").equals("no")) {
+				hp.put("whathappenlimitsharing", "Your choices will apply to everyone on the account - unless you tell us otherwise");
+				
+			}
+			
 			
 			if (hp.get("creditworth_limit") != null && hp.get("creditworth_limit").equals("Yes")) {
-				hp.put("optout_creditworth_limit", "Do not share information about my creditworthiness with your affiliates for their everyday business purposes.");
+				hp.put("optout_creditworth_limit", StringEscapeUtils.unescapeHtml4("&#x25a2;")+" Do not share information about my creditworthiness with your affiliates for their everyday business purposes.");
 			}
 			
 			if (hp.get("afftomarket_limit") != null && hp.get("afftomarket_limit").equals("Yes")) {
-				hp.put("optout_afftomarket_limit", "Do not allow your affiliates to use my personal information to market to me.");
+				hp.put("optout_afftomarket_limit", StringEscapeUtils.unescapeHtml4("&#x25a2;")+" Do not allow your affiliates to use my personal information to market to me.");
 			}
 			
 			if (hp.get("nonafftomarket_limit") != null && hp.get("nonafftomarket_limit").equals("Yes")) {
-				hp.put("optout_nonafftomarket_limit", "Do not share my personal information with nonaffiliates to market their products and services to me.");
+				hp.put("optout_nonafftomarket_limit", StringEscapeUtils.unescapeHtml4("&#x25a2;")+" Do not share my personal information with nonaffiliates to market their products and services to me.");
 			}
 			
 			if (hp.get("marketpurpose_limit") != null && hp.get("marketpurpose_limit").equals("Yes")) {
-				hp.put("optout_marketpurpose_limit", "Do not share my personal information to market to me.");
+				hp.put("optout_marketpurpose_limit", StringEscapeUtils.unescapeHtml4("&#x25a2;")+" Do not share my personal information to market to me.");
 			}
 			
 			if (hp.get("jointmarket_limit") != null && hp.get("jointmarket_limit").equals("Yes")) {
-				hp.put("optout_jointmarket_limit", "Do not share my personal information with other financial institutions to jointly market to me.");
+				
+				hp.put("optout_jointmarket_limit", StringEscapeUtils.unescapeHtml4("&#x25a2;")+" Do not share my personal information with other financial institutions to jointly market to me.");
 			}
 			
+			/**
+			 * Set content
+			 * */
 
 			for (String key: hp.keySet()) {
 				ht.setContent(key, hp.get(key));
