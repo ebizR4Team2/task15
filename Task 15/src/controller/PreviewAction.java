@@ -62,6 +62,10 @@ public class PreviewAction extends Action {
 				}
 			}
 			
+			if(hp.get("memberorcustomer") != null) {
+				hp.put("memberorcustomer1", hp.get("memberorcustomer"));
+			}
+			
 			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
 				hp.put("JointPolicy", "");
 			} else {
@@ -183,6 +187,15 @@ public class PreviewAction extends Action {
 				
 				hp.put("optout_jointmarket_limit", StringEscapeUtils.unescapeHtml4("&#x25a2;")+" Do not share my personal information with other financial institutions to jointly market to me.");
 			}
+			
+			/**
+			 * Other info
+			 * */
+			
+			if (hp.get("statelawsbelow") != null && hp.get("statelawsbelow").equals("")) {
+				hp.put("statelawsbelow_div", "");
+			}
+			
 			
 			/**
 			 * Set content

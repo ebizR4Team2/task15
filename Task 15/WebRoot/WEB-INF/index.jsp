@@ -205,15 +205,15 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="exampleInputPassword1">Do you want to use the word "memember" or "customer"?</label>
+						<label for="exampleInputPassword1">Do you want to use the word "member" or "customer"?</label>
 						<div class="radio">
-							<label> <input type="radio" name="haveaffiliate"
-								id="useMemberOrNot1" value="yes" ${useMemberOrNot}> Member
+							<label> <input type="radio" name="memberorcustomer"
+								id="useMemberOrNot1" value="member" ${useMemberOrNot}> Member
 							</label>
 						</div>
 						<div class="radio">
-							<label> <input type="radio" name="haveaffiliate"
-								id="useMemberOrNot2" value="no" ${useMemberOrNot}> Customer
+							<label> <input type="radio" name="memberorcustomer"
+								id="useMemberOrNot2" value="customer" ${useMemberOrNot}> Customer
 							</label>
 						</div>
 					</div>
