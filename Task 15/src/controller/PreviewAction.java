@@ -28,6 +28,10 @@ public class PreviewAction extends Action {
 
 	@Override
 	public String perform(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("userid") == null) {
+			return "index.do";
+		}
 		String userid = (String) request.getSession().getAttribute("userid");
 		XmlParser xml = new XmlParser();
 		File newXmlFile;

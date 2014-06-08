@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -26,6 +27,10 @@ public class DownloadAction extends Action {
 
 	@Override
 	public String perform(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("userid") == null) {
+			return "index.do";
+		}
 		filePath = request.getSession().getServletContext().getRealPath("/")
 				+ "form" + System.getProperty("file.separator");
 		String userid = (String) request.getSession().getAttribute("userid");;

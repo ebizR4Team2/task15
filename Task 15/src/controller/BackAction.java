@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.mybeans.form.FormBeanException;
@@ -93,6 +94,10 @@ public class BackAction extends Action {
 	
 	@Override
 	public String perform(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("userid") == null) {
+			return "index.do";
+		}
 		String userid = (String) request.getSession().getAttribute("userid");
 		String filePath2 = request.getSession().getServletContext().getRealPath("/")
 				+ "form" + System.getProperty("file.separator") + userid;
