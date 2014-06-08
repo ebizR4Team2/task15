@@ -70,11 +70,12 @@ public class PreviewAction extends Action {
 				hp.put("phoneNumber1", hp.get("phoneNumber"));
 			}
 			
-			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
-				hp.put("JointPolicy", "");
-			} else {
-				hp.remove("JointPolicy");
-			}
+//			if (hp.get("JointPolicy") != null && hp.get("JointPolicy").equals("no")) {
+//				//hp.put("JointPolicy", "");
+//				ht.removeRow("JointPolicy_row");
+//			}  
+			
+			
 			ht.generateLink("optoutonlineform", userid + "optout_online.html", "opt out form");
 			ht.generateLink("optoutonlineform1", userid + "optout_online.html", "opt out form");
 			

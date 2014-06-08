@@ -52,7 +52,7 @@
 				</div>
 				<div class="form-group">
 					<label for="daysofsharinginfo">Within how many days do you start 
-					sharing information of new customer?</label> <input
+					sharing information of new customer?(30 days or more)</label> <input
 						type="number" class="form-control" name="daysofsharinginfo" value="${daysofsharinginfo}">
 				</div>
 
