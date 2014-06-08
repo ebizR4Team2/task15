@@ -273,6 +273,9 @@
 										if ($("#hidden_EverydayBusiness1").val() == "checked") {
 											$("#wedonotshare1").hide();
 											$("#EverydayBusiness_limit_div").show();
+										} else {
+											$("#wedonotshare1").show();
+											$("#EverydayBusiness_limit_div").hide();
 										}
 									
 										$("input[name='EverydayBusiness']").change(function() {
@@ -296,6 +299,7 @@
 											id="optionsRadios1" value="Yes" ${marketpurposeY}>
 											Yes
 										</label>
+										<input type="hidden" id="hidden_marketpurpose" value="${marketpurposeY}">
 									</div>
 									<div class="radio">
 										<label> <input type="radio" name="marketpurpose"
@@ -322,6 +326,13 @@
 									<div id="wedonotshare2" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
+										if ($("#hidden_marketpurpose").val() == "checked") {
+											$("#wedonotshare2").hide();
+											$("#marketpurpose_limit_div").show();
+										} else {
+											$("#wedonotshare2").show();
+											$("#marketpurpose_limit_div").hide();
+										}
 										$("input[name='marketpurpose']")
 												.change(
 														function() {
@@ -370,6 +381,7 @@
 												id="optionsRadios1" value="Yes" ${jointmarket_limitY}>
 												Yes
 											</label>
+											<input type="hidden" id="hidden_jointmarket_limit" value="${jointmarket_limitY}">
 										</div>
 										<div class="radio">
 											<label> <input type="radio" name="jointmarket_limit"
@@ -381,6 +393,13 @@
 									<div id="wedonotshare3" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
+									if ($("#hidden_jointmarket_limit").val() == "checked") {
+										$("#wedonotshare3").hide();
+										$("#jointmarket_limit_div").show();
+									} else {
+										$("#wedonotshare3").show();
+										$("#jointmarket_limit_div").hide();
+									}
 										$("input[name='jointmarket']")
 												.change(
 														function() {
@@ -431,6 +450,7 @@
 												name="affeverydaybusi_limit" id="optionsRadios1" value="Yes"
 												${affeverydaybusi_limitY}> Yes
 											</label>
+											<input type="hidden" id="hidden_affeverydaybusi_limit" value="${jointmarket_limitY}">
 										</div>
 										<div class="radio">
 											<label> <input type="radio"
@@ -442,6 +462,13 @@
 									<div id="wedonotshare4" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
+									if ($("#hidden_affeverydaybusi_limit").val() == "checked") {
+										$("#wedonotshare4").hide();
+										$("#affeverydaybusi_limit_div").show();
+									} else {
+										$("#wedonotshare4").show();
+										$("#affeverydaybusi_limit_div").hide();
+									}
 										$("input[name='affeverydaybusi']")
 												.change(
 														function() {
@@ -477,6 +504,7 @@
 											id="optionsRadios1" value="Yes" ${creditworthY}> Yes
 										</label>
 									</div>
+									<input type="hidden" id="hidden_creditworth" value="${creditworthY}">
 									<div class="radio">
 										<label> <input type="radio" name="creditworth"
 											id="optionsRadios2" value="No" ${creditworthN}> No
@@ -490,6 +518,13 @@
 									<div id="wedonotshare5Yes" style="display: none">
 										<span>Yes</span>
 									</div> <script>
+									if ($("#hidden_creditworth").val() == "checked") {
+										$("#wedonotshare5").hide();
+										$("#wedonotshare5Yes").show();
+									} else {
+										$("#wedonotshare5").show();
+										$("#wedonotshare5Yes").hide();
+									}
 										$("input[name='creditworth']").change(
 												function() {
 
@@ -518,16 +553,19 @@
 										<label> <input type="radio" name="afftomarket"
 											id="optionsRadios1" value="Yes" ${afftomarketY}> Yes
 										</label>
+										<input type="hidden" id="hidden_afftomarket" value="${afftomarketY}">
 									</div>
 									<div class="radio">
 										<label> <input type="radio" name="afftomarket"
 											id="optionsRadios2" value="No" ${afftomarketN}> No
 										</label>
 									</div> <script>
-										if ($("#hidden_optionsRadios").val() == "checked") {
+										if ($("#hidden_afftomarket").val() == "checked") {
 											$("#sharepersonalinfo").show();
-											$("#sharepersonalinfo_question")
-													.show();
+											$("#sharepersonalinfo_question").show();
+										} else {
+											$("#sharepersonalinfo").hide();
+											$("#sharepersonalinfo_question").hide();
 										}
 										$("input[name='haveaffiliate']")
 												.change(
@@ -561,6 +599,7 @@
 												id="optionsRadios1" value="Yes" ${afftomarket_limitY}>
 												Yes
 											</label>
+											<input type="hidden" id="hidden_afftomarket_limit" value="${afftomarket_limitY}">
 										</div>
 										<div class="radio">
 											<label> <input type="radio" name="afftomarket_limit"
@@ -572,6 +611,13 @@
 									<div id="wedonotshare6" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
+									if ($("#hidden_afftomarket_limit").val() == "checked") {
+										$("#afftomarket_limit_div").show();
+										$("#wedonotshare6").hide();
+									} else {
+										$("#afftomarket_limit_div").hide();
+										$("#wedonotshare6").show();
+									}
 										$("input[name='afftomarket']")
 												.change(
 														function() {
@@ -605,6 +651,7 @@
 											id="optionsRadios1" value="Yes" ${nonafftomarketY}>
 											Yes
 										</label>
+										<input type="hidden" id="hidden_nonafftomarket" value="${nonafftomarketY}">
 									</div>
 									<div class="radio">
 										<label> <input type="radio" name="nonafftomarket"
@@ -630,6 +677,13 @@
 									<div id="wedonotshare7" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
+									if ($("#hidden_nonafftomarket").val() == "checked") {
+										$("#nonafftomarket_limit_div").show();
+										$("#wedonotshare7").hide();
+									} else {
+										$("#nonafftomarket_limit_div").hide();
+										$("#wedonotshare7").show();
+									}
 										$("input[name='nonafftomarket']")
 												.change(
 														function() {
@@ -1189,16 +1243,14 @@
 							<div class="radio">
 								<label> <input type="radio"
 									name="whathappenlimitsharing" id="optionsRadios1"
-									value="Your
-									choices apply to everyone on the account">
+									value="no">
 									Your choices apply to everyone on the account
 								</label>
 							</div>
 							<div class="radio">
 								<label> <input type="radio"
 									name="whathappenlimitsharing" id="optionsRadios2"
-									value="Your choices will
-									apply to everyone on the account - unless you tell us otherwise">
+									value="yes">
 									Your choices will apply to everyone on the account - unless you
 									tell us otherwise
 								</label>
