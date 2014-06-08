@@ -22,6 +22,7 @@ public class Controller extends HttpServlet {
     	Action.add(new ImportAction());
     	Action.add(new PreviewAction());
     	Action.add(new DownloadAction());
+    	Action.add(new BackAction());
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,6 +1,7 @@
 package controller;
 
 import java.awt.Checkbox;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.mybeans.form.FormBeanException;
@@ -20,12 +20,10 @@ import org.xml.sax.SAXException;
 import bean.XmlForm;
 import parser.XmlParser;
 
-public class ImportAction extends Action {
-	private FormBeanFactory<XmlForm> formBeanFactory = FormBeanFactory
-			.getInstance(XmlForm.class);
+public class BackAction extends Action {
 	private HashSet<String> checkBox;		// which attribute is checkBox
 	
-	public ImportAction() {
+	public BackAction() {
 		checkBox = new HashSet<String>();
 		checkBox.add("income");
 		checkBox.add("accountbalances");
@@ -90,29 +88,18 @@ public class ImportAction extends Action {
 	
 	@Override
 	public String getName() {
-		return "import.do";
+		return "back.do";
 	}
 	
 	@Override
 	public String perform(HttpServletRequest request) {
-		
-		List<String> errors = new ArrayList<String>();
-		request.setAttribute("errors", errors);
+		String userid = (String) request.getSession().getAttribute("userid");
+		String filePath2 = request.getSession().getServletContext().getRealPath("/")
+				+ "form" + System.getProperty("file.separator") + userid;
 		
 		try {
-			XmlForm form = formBeanFactory.create(request);
-			if (!form.isPresent() || !request.getMethod().equals("POST")) {
-				System.out.print("haha");
-				return "import.jsp";
-			}
-			errors.addAll(form.getValidationErrors());
-			if (errors.size() > 0) {
-				request.setAttribute("errors", errors);
-				return "import.jsp";
-			}
-			
 			XmlParser xml = new XmlParser();
-			HashMap<String, String> map = xml.importXml(form.getXml());
+			HashMap<String, String> map = xml.importXml(new File(filePath2 + "temp.xml"));
 			Iterator<Entry<String, String>> itr = map.entrySet().iterator();
 			while (itr.hasNext()) {
 				Entry<String, String> entry = itr.next();
@@ -134,10 +121,8 @@ public class ImportAction extends Action {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (NullPointerException e) {
-			return "import.jsp";
-		} catch (FormBeanException e) {
-			return "import.jsp";
+			return "preview.jsp";
 		}
-		return "import.jsp";
+		return "preview.jsp";
 	}
 }
