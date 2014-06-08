@@ -50,6 +50,11 @@
 						id="exampleInputEmail1" name="websiteDomainName"
 						value="${websiteDomainName}">
 				</div>
+				<div class="form-group">
+					<label for="daysofsharinginfo">Within how many days do you start 
+					sharing information of new customer?</label> <input
+						type="number" class="form-control" name="daysofsharinginfo" value="${daysofsharinginfo}">
+				</div>
 
 				<div class="form-group">
 					<label for="typeofpersonalinfo">What types of personal
@@ -210,6 +215,7 @@
 							<label> <input type="radio" name="haveaffiliate"
 								id="useMemberOrNot2" value="no" ${useMemberOrNot}> Customer
 							</label>
+						</div>
 					</div>
 
 
@@ -1248,25 +1254,6 @@
 								type="hidden" id="hidden_provideoptoutform"
 								value="${provideoptoutformY}">
 						</div>
-						<script>
-							if ($("#hidden_provideoptoutform").val() == "checked") {
-								$("#whathappenlimitsharing").show();
-							}
-							$("input[name='provideoptoutform']")
-									.change(
-											function() {
-
-												if ($(this).val() == "no") {
-													$("#whathappenlimitsharing")
-															.hide();
-												} else {
-													$("#whathappenlimitsharing")
-															.show();
-												}
-
-											});
-						</script>
-
 
 						<div class="form-group" id="whathappenlimitsharing"
 							style="display: none">
@@ -1288,6 +1275,48 @@
 								</label>
 							</div>
 						</div>
+						
+						<div class="form-group" id="opt-out-types">
+							<label>What types of opt-out do you want to provide?</label>
+		
+							<div class="checkbox">
+								<label> <input type="checkbox"
+									value="mail" name="opt-out-mail"
+									${opt-out-mail}>mail
+								</label>
+							</div>
+							<div class="checkbox">
+								<label> <input type="checkbox"
+									value="online" name="opt-out-online"
+									${opt-out-online}>online
+								</label>
+							</div>
+							<div class="checkbox">
+								<label> <input type="checkbox"
+									value="phone" name="opt-out-phone"
+									${opt-out-phone}>phone
+								</label>
+							</div>
+						</div>
+						
+						
+						<script>
+							if ($("#hidden_provideoptoutform").val() == "checked") {
+								$("#whathappenlimitsharing").show();
+								$("#opt-out-types").show();
+							}
+							$("input[name='provideoptoutform']").change(function() {
+								if ($(this).val() == "no") {
+									$("#whathappenlimitsharing").hide();
+									$("#opt-out-types").hide();
+								} else {
+									$("#whathappenlimitsharing").show();
+									$("#opt-out-types").show();
+								}
+							});
+						</script>
+						
+						
 
 						<div class="form-group">
 							Provide information about state laws below
