@@ -22,10 +22,6 @@ public class Html {
 		File input = new File(filePath + fileName);
 		this.doc = Jsoup.parse(input, "UTF-8");
 		this.elements = doc.getAllElements();
-		System.out.print(input.getPath());
-//		for (Element elm : elements) {
-//			System.out.println(elm);
-//		}
 	}
 	
 	/**

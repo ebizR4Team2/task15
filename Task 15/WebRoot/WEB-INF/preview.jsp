@@ -31,7 +31,7 @@
 			<br>
 			<br>
 			<button type="submit" class="btn btn-default">Back to edit</button>
-			<button type="submit" class="btn btn-default">Download</button>
+			<a href="download.do"><button type="" class="btn btn-default">Download</button></a>
 		</div>
 
 	</div>

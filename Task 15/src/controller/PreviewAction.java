@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,7 +18,7 @@ import parser.MyZip;
 import parser.XmlParser;
 
 public class PreviewAction extends Action {
-	private static String filePath2;
+	private static String filePath2;		// path in server
 
 	@Override
 	public String getName() {
@@ -26,12 +27,12 @@ public class PreviewAction extends Action {
 
 	@Override
 	public String perform(HttpServletRequest request) {
-		
+		String userid = (String) request.getSession().getAttribute("userid");
 		XmlParser xml = new XmlParser();
 		File newXmlFile;
 		HashMap<String, String> hp = new HashMap<String, String>();
 		try {
-			newXmlFile = xml.saveXml(request, "test.xml");
+			newXmlFile = xml.saveXml(request, userid + "temp.xml");
 			hp = xml.importXml(newXmlFile);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -45,7 +46,7 @@ public class PreviewAction extends Action {
 		while (filePath.charAt(index) != '/') {
 			index--;
 		}
-		filePath.replace(index+1, filePath.length(), "form/output.html");
+		filePath.replace(index+1, filePath.length(), "form/" + userid + "output.html");
 		request.setAttribute("previewUrl", filePath);
 
 		try {
@@ -137,20 +138,20 @@ public class PreviewAction extends Action {
 			}
 			
 			//ht.setContent("nameofinstitution", hp.get("nameofinstitution"));
-			ht.makeHtmlByDoc("output.html");
+			ht.makeHtmlByDoc(userid + "output.html");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 		filePath2 = request.getSession().getServletContext().getRealPath("/")
-				+ "form" + System.getProperty("file.separator");
+				+ "form" + System.getProperty("file.separator") + userid;
 		
 		try {
 			if (request.getParameter("saveforlater") != null) {
 				ArrayList<File> list = new ArrayList<File>();
-				MyZip zip = new MyZip("test.zip", request);
-				list.add(new File(filePath2 + "test.xml"));
-				File newZip = zip.compressFiles(list, filePath2 + "test.zip");
+				MyZip zip = new MyZip(userid + "temp.zip", request);
+				list.add(new File(filePath2 + "temp.xml"));
+				File newZip = zip.compressFiles(list, filePath2 + "temp.zip");
 				return newZip.getName();
 			}
 			

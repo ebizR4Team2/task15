@@ -2,6 +2,7 @@
 
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -20,6 +21,7 @@ public class Controller extends HttpServlet {
     	Action.add(new IndexAction());
     	Action.add(new ImportAction());
     	Action.add(new PreviewAction());
+    	Action.add(new DownloadAction());
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

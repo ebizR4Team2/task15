@@ -22,9 +22,10 @@ import parser.XmlParser;
 public class ImportAction extends Action {
 	private FormBeanFactory<XmlForm> formBeanFactory = FormBeanFactory
 			.getInstance(XmlForm.class);
-	private HashSet<String> checkBox;
+	private HashSet<String> checkBox;		// which attribute is checkBox
+	
 	public ImportAction() {
-		checkBox = new HashSet();
+		checkBox = new HashSet<String>();
 		checkBox.add("income");
 		checkBox.add("accountbalances");
 		checkBox.add("paymenthistory");
@@ -123,13 +124,10 @@ public class ImportAction extends Action {
 			}
 			return "index.jsp";
 		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SAXException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (NullPointerException e) {
 			return "import.jsp";
