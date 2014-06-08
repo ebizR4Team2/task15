@@ -275,28 +275,15 @@
 											$("#EverydayBusiness_limit_div").show();
 										}
 									
-										$("input[name='EverydayBusiness']")
-												.change(
-														function() {
-
-															if ($(this).val() == "No") {
-																$(
-																		"#wedonotshare1")
-																		.show();
-																$(
-																		"#EverydayBusiness_limit_div")
-																		.hide();
-
-															} else {
-																$(
-																		"#wedonotshare1")
-																		.hide();
-																$(
-																		"#EverydayBusiness_limit_div")
-																		.show();
-															}
-
-														});
+										$("input[name='EverydayBusiness']").change(function() {
+											if ($(this).val() == "No") {
+												$("#wedonotshare1").show();
+												$("#EverydayBusiness_limit_div").hide();
+											} else {
+												$("#wedonotshare1").hide();
+												$("#EverydayBusiness_limit_div").show();
+											}
+											});
 									</script>
 								</td>
 							</tr>
