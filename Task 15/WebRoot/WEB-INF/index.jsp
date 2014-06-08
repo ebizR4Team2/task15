@@ -28,9 +28,10 @@
 						name="nameofinstitution" value="${nameofinstitution}">
 				</div>
 				<div class="form-group">
-					<label for="nameofinstitution">Enter the address of financial
-						institution</label> <input type="text" class="form-control"
-						name="addressofinstitution" placeholder="Street, city, state, zip" value="${addressofinstitution}">
+					<label for="nameofinstitution">Enter the address of
+						financial institution</label> <input type="text" class="form-control"
+						name="addressofinstitution" placeholder="Street, city, state, zip"
+						value="${addressofinstitution}">
 				</div>
 				<div class="form-group">
 					<label for="lastreviseddate">Enter revised date</label> <input
@@ -46,7 +47,8 @@
 				<div class="form-group">
 					<label for="exampleInputEmail1">Enter your website domain
 						name</label> <input type="text" class="form-control"
-						id="exampleInputEmail1" name="websiteDomainName" value="${websiteDomainName}">
+						id="exampleInputEmail1" name="websiteDomainName"
+						value="${websiteDomainName}">
 				</div>
 
 				<div class="form-group">
@@ -66,7 +68,8 @@
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="account balances"
-							name="accountbalances" ${accountbalances}>account balances
+							name="accountbalances" ${accountbalances}>account
+							balances
 						</label>
 					</div>
 					<div class="checkbox">
@@ -76,14 +79,15 @@
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="transaction history"
-							name="transactionhistory" ${transactionhistory}>transaction history
+							name="transactionhistory" ${transactionhistory}>transaction
+							history
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
 							value="transaction or loss history"
-							name="transactionorlosshistory" ${transactionorlosshistory}>transaction or loss
-							history
+							name="transactionorlosshistory" ${transactionorlosshistory}>transaction
+							or loss history
 						</label>
 					</div>
 					<div class="checkbox">
@@ -103,42 +107,45 @@
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
-							value="investment experience" name="investmentexperience" ${investmentexperience}>investment
-							experience
+							value="investment experience" name="investmentexperience"
+							${investmentexperience}>investment experience
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
 							value="credit-based insurance scores"
-							name="credit-basedinsurancescores" ${credit-basedinsurancescores}>credit-based insurance
-							scores
+							name="credit-basedinsurancescores" ${credit-basedinsurancescores}>credit-based
+							insurance scores
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
-							value="insurance claim history" name="insuranceclaimhistory" ${insuranceclaimhistory}>insurance
-							claim history
+							value="insurance claim history" name="insuranceclaimhistory"
+							${insuranceclaimhistory}>insurance claim history
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="medical information"
-							name="medicalinformation" ${medicalinformation}>medical information
+							name="medicalinformation" ${medicalinformation}>medical
+							information
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="overdraft history"
-							name="overdrafthistory" ${overdrafthistory}>overdraft history
+							name="overdrafthistory" ${overdrafthistory}>overdraft
+							history
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="purchase history"
-							name="purchasehistory" ${purchasehistory}>purchase history
+							name="purchasehistory" ${purchasehistory}>purchase
+							history
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
-							value="account transactions" name="accounttransactions" ${accounttransactions}>account
-							transactions
+							value="account transactions" name="accounttransactions"
+							${accounttransactions}>account transactions
 						</label>
 					</div>
 					<div class="checkbox">
@@ -148,46 +155,47 @@
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
-							value="medical-related debts" name="medical-relateddebts" ${medical-relateddebts}>medical-related
-							debts
+							value="medical-related debts" name="medical-relateddebts"
+							${medical-relateddebts}>medical-related debts
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
-							value="credit card or other debt" name="creditcardorotherdebt" ${creditcardorotherdebt}>credit
-							card or other debt
+							value="credit card or other debt" name="creditcardorotherdebt"
+							${creditcardorotherdebt}>credit card or other debt
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
 							value="mortgage rates and payments"
-							name="mortgageratesandpayments" ${mortgageratesandpayments}>mortgage rates and
-							payments
+							name="mortgageratesandpayments" ${mortgageratesandpayments}>mortgage
+							rates and payments
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox" value="retirement assets"
-							name="retirementassets" ${retirementassets}>retirement assets
+							name="retirementassets" ${retirementassets}>retirement
+							assets
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
 							value="checking account information"
-							name="checkingaccountinformation" ${checkingaccountinformation}>checking account
-							information
+							name="checkingaccountinformation" ${checkingaccountinformation}>checking
+							account information
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
-							value="employment information" name="employmentinformation" ${employmentinformation}>employment
-							information
+							value="employment information" name="employmentinformation"
+							${employmentinformation}>employment information
 						</label>
 					</div>
 					<div class="checkbox">
 						<label> <input type="checkbox"
 							value="wire transfer instructions"
-							name="wiretransferinstructions" ${wiretransferinstructions}>wire transfer
-							instructions
+							name="wiretransferinstructions" ${wiretransferinstructions}>wire
+							transfer instructions
 						</label>
 					</div>
 
@@ -205,24 +213,11 @@
 							<label> <input type="radio" name="haveaffiliate"
 								id="optionsRadios2" value="no" ${haveaffiliateN}> No
 							</label>
+							 <input
+								type="hidden" id="hidden_optionsRadios"
+								value="${haveaffiliateY}">
 						</div>
 					</div>
-
-					<script>
-						$("input[name='haveaffiliate']").change(function() {
-
-							if ($(this).val() == "yes") {
-								$("#sharepersonalinfo").show();
-								$("#sharepersonalinfo_question").show();
-							} else {
-								$("#sharepersonalinfo").hide();
-								$("#sharepersonalinfo_question").hide();
-							}
-
-						});
-					</script>
-
-
 
 					<table class="table table-bordered">
 						<thead>
@@ -241,12 +236,15 @@
 								<td>
 									<div class="radio">
 										<label> <input type="radio" name="EverydayBusiness"
-											id="EverydayBusiness1" value="Yes" ${EverydayBusinessY}> Yes
+											id="EverydayBusiness1" value="Yes" ${EverydayBusinessY}>
+											Yes
 										</label>
+										<input type="hidden" id="hidden_EverydayBusiness1" value="${EverydayBusinessY}">
 									</div>
 									<div class="radio">
 										<label> <input type="radio" name="EverydayBusiness"
-											id="EverydayBusiness2" value="No" ${EverydayBusinessN}> No
+											id="EverydayBusiness2" value="No" ${EverydayBusinessN}>
+											No
 										</label>
 									</div>
 								</td>
@@ -265,11 +263,18 @@
 												value="No" ${EverydayBusiness_limitN}> No
 											</label>
 										</div>
-										
+
 									</div>
 									<div id="wedonotshare1" style="display: none">
 										<span>You do not share</span>
-									</div> <script>
+									</div> 
+									<script>
+									
+										if ($("#hidden_EverydayBusiness1").val() == "checked") {
+											$("#wedonotshare1").hide();
+											$("#EverydayBusiness_limit_div").show();
+										}
+									
 										$("input[name='EverydayBusiness']")
 												.change(
 														function() {
@@ -281,8 +286,7 @@
 																$(
 																		"#EverydayBusiness_limit_div")
 																		.hide();
-															
-																
+
 															} else {
 																$(
 																		"#wedonotshare1")
@@ -302,7 +306,8 @@
 								<td>
 									<div class="radio">
 										<label> <input type="radio" name="marketpurpose"
-											id="optionsRadios1" value="Yes" ${marketpurposeY}> Yes
+											id="optionsRadios1" value="Yes" ${marketpurposeY}>
+											Yes
 										</label>
 									</div>
 									<div class="radio">
@@ -315,14 +320,14 @@
 									<div id="marketpurpose_limit_div">
 										<div class="radio">
 											<label> <input type="radio"
-												name="marketpurpose_limit" id="optionsRadios1"
-												value="Yes" ${marketpurpose_limitY}> Yes
+												name="marketpurpose_limit" id="optionsRadios1" value="Yes"
+												${marketpurpose_limitY}> Yes
 											</label>
 										</div>
 										<div class="radio">
 											<label> <input type="radio"
-												name="marketpurpose_limit" id="optionsRadios2"
-												value="No" ${marketpurpose_limitN}> No
+												name="marketpurpose_limit" id="optionsRadios2" value="No"
+												${marketpurpose_limitN}> No
 											</label>
 										</div>
 									</div>
@@ -375,12 +380,14 @@
 									<div id="jointmarket_limit_div">
 										<div class="radio">
 											<label> <input type="radio" name="jointmarket_limit"
-												id="optionsRadios1" value="Yes" ${jointmarket_limitY}> Yes
+												id="optionsRadios1" value="Yes" ${jointmarket_limitY}>
+												Yes
 											</label>
 										</div>
 										<div class="radio">
 											<label> <input type="radio" name="jointmarket_limit"
-												id="optionsRadios2" value="No" ${jointmarket_limitN}> No
+												id="optionsRadios2" value="No" ${jointmarket_limitN}>
+												No
 											</label>
 										</div>
 									</div>
@@ -419,12 +426,14 @@
 								<td>
 									<div class="radio">
 										<label> <input type="radio" name="affeverydaybusi"
-											id="optionsRadios1" value="Yes" ${affeverydaybusiY}> Yes
+											id="optionsRadios1" value="Yes" ${affeverydaybusiY}>
+											Yes
 										</label>
 									</div>
 									<div class="radio">
 										<label> <input type="radio" name="affeverydaybusi"
-											id="optionsRadios2" value="No" ${affeverydaybusiN}> No
+											id="optionsRadios2" value="No" ${affeverydaybusiN}>
+											No
 										</label>
 									</div>
 								</td>
@@ -432,14 +441,14 @@
 									<div id="affeverydaybusi_limit_div">
 										<div class="radio">
 											<label> <input type="radio"
-												name="affeverydaybusi_limit" id="optionsRadios1"
-												value="Yes" ${affeverydaybusi_limitY}> Yes
+												name="affeverydaybusi_limit" id="optionsRadios1" value="Yes"
+												${affeverydaybusi_limitY}> Yes
 											</label>
 										</div>
 										<div class="radio">
 											<label> <input type="radio"
-												name="affeverydaybusi_limit" id="optionsRadios2"
-												value="No" ${affeverydaybusi_limitN}> No
+												name="affeverydaybusi_limit" id="optionsRadios2" value="No"
+												${affeverydaybusi_limitN}> No
 											</label>
 										</div>
 									</div>
@@ -488,42 +497,28 @@
 									</div>
 								</td>
 								<td>
-									<div id="creditworth_limit_div">
-										<div class="radio">
-											<label> <input type="radio" name="creditworth_limit"
-												id="optionsRadios1" value="Yes" ${creditworth_limitY}> Yes
-											</label>
-										</div>
-										<div class="radio">
-											<label> <input type="radio" name="creditworth_limit"
-												id="optionsRadios2" value="No" ${creditworth_limitN}> No
-											</label>
-										</div>
-									</div>
 									<div id="wedonotshare5" style="display: none">
 										<span>You do not share</span>
+									</div>
+									<div id="wedonotshare5Yes" style="display: none">
+										<span>Yes</span>
 									</div> <script>
-										$("input[name='creditworth']")
-												.change(
-														function() {
+										$("input[name='creditworth']").change(
+												function() {
 
-															if ($(this).val() == "No") {
-																$(
-																		"#wedonotshare5")
-																		.show();
-																$(
-																		"#creditworth_limit_div")
-																		.hide();
-															} else {
-																$(
-																		"#wedonotshare5")
-																		.hide();
-																$(
-																		"#creditworth_limit_div")
-																		.show();
-															}
+													if ($(this).val() == "No") {
+														$("#wedonotshare5")
+																.show();
+														$("#wedonotshare5Yes")
+																.hide();
+													} else {
+														$("#wedonotshare5")
+																.hide();
+														$("#wedonotshare5Yes")
+																.show();
+													}
 
-														});
+												});
 									</script>
 
 								</td>
@@ -541,22 +536,53 @@
 										<label> <input type="radio" name="afftomarket"
 											id="optionsRadios2" value="No" ${afftomarketN}> No
 										</label>
-									</div>
+									</div> <script>
+										if ($("#hidden_optionsRadios").val() == "checked") {
+											$("#sharepersonalinfo").show();
+											$("#sharepersonalinfo_question")
+													.show();
+										}
+										$("input[name='haveaffiliate']")
+												.change(
+														function() {
+
+															if ($(this).val() == "yes") {
+																$(
+																		"#sharepersonalinfo")
+																		.show();
+																$(
+																		"#sharepersonalinfo_question")
+																		.show();
+															} else {
+																$(
+																		"#sharepersonalinfo")
+																		.hide();
+																$(
+																		"#sharepersonalinfo_question")
+																		.hide();
+															}
+
+														});
+									</script>
+
 								</td>
+
 								<td>
-								<div id="afftomarket_limit_div">
-									<div class="radio">
-										<label> <input type="radio" name="afftomarket_limit"
-											id="optionsRadios1" value="Yes" ${afftomarket_limitY}> Yes
-										</label>
+									<div id="afftomarket_limit_div">
+										<div class="radio">
+											<label> <input type="radio" name="afftomarket_limit"
+												id="optionsRadios1" value="Yes" ${afftomarket_limitY}>
+												Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio" name="afftomarket_limit"
+												id="optionsRadios2" value="No" ${afftomarket_limitN}>
+												No
+											</label>
+										</div>
 									</div>
-									<div class="radio">
-										<label> <input type="radio" name="afftomarket_limit"
-											id="optionsRadios2" value="No" ${afftomarket_limitN}> No
-										</label>
-									</div>
-								</div>
-								   <div id="wedonotshare6" style="display: none">
+									<div id="wedonotshare6" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
 										$("input[name='afftomarket']")
@@ -589,7 +615,8 @@
 								<td>
 									<div class="radio">
 										<label> <input type="radio" name="nonafftomarket"
-											id="optionsRadios1" value="Yes" ${nonafftomarketY}> Yes
+											id="optionsRadios1" value="Yes" ${nonafftomarketY}>
+											Yes
 										</label>
 									</div>
 									<div class="radio">
@@ -599,19 +626,21 @@
 									</div>
 								</td>
 								<td>
-								<div id="nonafftomarket_limit_div">
-									<div class="radio">
-										<label> <input type="radio" name="nonafftomarket_limit"
-											id="optionsRadios1" value="Yes" ${nonafftomarket_limitY}> Yes
-										</label>
+									<div id="nonafftomarket_limit_div">
+										<div class="radio">
+											<label> <input type="radio"
+												name="nonafftomarket_limit" id="optionsRadios1" value="Yes"
+												${nonafftomarket_limitY}> Yes
+											</label>
+										</div>
+										<div class="radio">
+											<label> <input type="radio"
+												name="nonafftomarket_limit" id="optionsRadios2" value="No"
+												${nonafftomarket_limitN}> No
+											</label>
+										</div>
 									</div>
-									<div class="radio">
-										<label> <input type="radio" name="nonafftomarket_limit"
-											id="optionsRadios2" value="No" ${nonafftomarket_limitN}> No
-										</label>
-									</div>
-								</div>
-								  <div id="wedonotshare7" style="display: none">
+									<div id="wedonotshare7" style="display: none">
 										<span>You do not share</span>
 									</div> <script>
 										$("input[name='nonafftomarket']")
@@ -655,8 +684,20 @@
 								value="no" ${sharepersonalinfoN}> No
 							</label>
 						</div>
+						<input type="hidden" id="hidden_sharepersonalinfo" value="${sharepersonalinfoY}">
 					</div>
+					<div class="form-group" id="whoareyouraffiliates"
+						style="display: none">
+						<label for="exampleInputPassword1">Who are your
+							affiliates?</label>
+						<textarea class="form-control" rows="3"
+							name="whoareyouraffiliates">${whoareyouraffiliates}</textarea>
+					</div>
+					
 					<script>
+						if ($("#hidden_sharepersonalinfo").val() == "checked") {
+							$("#whoareyouraffiliates").show();
+						}
 						$("input[name='sharepersonalinfo']").change(function() {
 
 							if ($(this).val() == "yes") {
@@ -667,33 +708,42 @@
 
 						});
 					</script>
-					<div class="form-group" id="whoareyouraffiliates"
-						style="display: none">
-						<label for="exampleInputPassword1">Who are your
-							affiliates?</label>
-						<textarea class="form-control" rows="3"
-							name="whoareyouraffiliates" >${whoareyouraffiliates}</textarea>
-					</div>
+					
 					<div class="form-group">
 						<label for="exampleInputPassword1">Do you share
 							information with non-affiliates?</label>
 						<div class="radio">
 							<label> <input type="radio"
 								name="sharepersonalinfononaffiliates"
-								id="sharepersonalinfononaffiliates" value="yes" ${sharepersonalinfononaffiliatesY}> Yes
+								id="sharepersonalinfononaffiliates" value="yes"
+								${sharepersonalinfononaffiliatesY}> Yes
 							</label>
 						</div>
 						<div class="radio">
 							<label> <input type="radio"
 								name="sharepersonalinfononaffiliates"
-								id="sharepersonalinfononaffiliates" value="no" ${sharepersonalinfononaffiliatesN}> No
+								id="sharepersonalinfononaffiliates" value="no"
+								${sharepersonalinfononaffiliatesN}> No
 							</label>
+							<input type="hidden" id="hidden_sharepersonalinfononaffiliates" value="${sharepersonalinfononaffiliatesY}">
 						</div>
 					</div>
+
+					<div class="form-group" id="whoareyournonaffiliates"
+						style="display: none;">
+						<label for="exampleInputPassword1">Who are your
+							non-affiliates?</label>
+						<textarea class="form-control" rows="3"
+							name="whoareyournonaffiliates">${whoareyournonaffiliates}</textarea>
+					</div>
+
 					<script>
+						if ($("#hidden_sharepersonalinfononaffiliates").val() == "checked") {
+							$("#whoareyournonaffiliates").show();
+						}
+
 						$("input[name='sharepersonalinfononaffiliates']")
 								.change(function() {
-
 									if ($(this).val() == "yes") {
 										$("#whoareyournonaffiliates").show();
 									} else {
@@ -702,13 +752,7 @@
 
 								});
 					</script>
-					<div class="form-group" id="whoareyournonaffiliates"
-						style="display: none;">
-						<label for="exampleInputPassword1">Who are your
-							non-affiliates?</label>
-						<textarea class="form-control" rows="3"
-							name="whoareyournonaffiliates" >${whoareyournonaffiliates}</textarea>
-					</div>
+
 					<div class="form-group">
 						<label for="exampleInputPassword1">Do you engage in joint
 							marketing?</label>
@@ -719,21 +763,14 @@
 						</div>
 						<div class="radio">
 							<label> <input type="radio" name="jointmarketing"
-								id="jointmarketing" value="no" ${jointmarketingN}> No
+								id="jointmarketing" value="no" ${jointmarketingN}> No <input
+								type="hidden" id="hidden_jointmarketing"
+								value="${jointmarketingY}">
 							</label>
 						</div>
+
 					</div>
-					<script>
-						$("input[name='jointmarketing']").change(function() {
 
-							if ($(this).val() == "yes") {
-								$("#whoareyourmarketingpartners").show();
-							} else {
-								$(whoareyourmarketingpartners).hide();
-							}
-
-						});
-					</script>
 					<div class="form-group" id="whoareyourmarketingpartners"
 						style="display: none;">
 						<label for="exampleInputPassword1">Who are your joint
@@ -742,10 +779,26 @@
 							name="whoareyourmarketingpartners">${whoareyourmarketingpartners}</textarea>
 					</div>
 
+					<script>
+						if ($("#hidden_jointmarketing").val() == "checked") {
+							$("#whoareyourmarketingpartners").show();
+						}
+
+						$("input[name='jointmarketing']").change(function() {
+							if ($(this).val() == "yes") {
+								console.log("yes");
+								$("#whoareyourmarketingpartners").show();
+							} else {
+								console.log("no");
+								$(whoareyourmarketingpartners).hide();
+							}
+
+						});
+					</script>
 
 
 					<div class="form-group">
-						<label for="exampleInputEmail1">Is this privacy policy
+						<label>Is this privacy policy
 							jointly provided by two or more financial institutions?</label>
 						<div class="radio">
 							<label> <input type="radio" name="JointPolicy"
@@ -756,9 +809,22 @@
 							<label> <input type="radio" name="JointPolicy"
 								id="JointPolicy" value="no" ${JointPolicyN}> No
 							</label>
+							<input
+								type="hidden" id="hidden_JointPolicy"
+								value="${JointPolicyY}">
 						</div>
 					</div>
+					
+					<div class="form-group" id="Whoisprovidingthisnotice"
+						style="display: none;">
+						<label for="who">Who is providing this notice?</label>
+						<textarea class="form-control" name="whoprovidenotice" row="4">${whoprovidenotice}</textarea>
+					</div>
+					
 					<script>
+						if ($("#hidden_JointPolicy").val() == "checked") {
+							$("#Whoisprovidingthisnotice").show();
+						}
 						$("input[name='JointPolicy']").change(function() {
 
 							if ($(this).val() == "yes") {
@@ -769,11 +835,7 @@
 
 						});
 					</script>
-					<div class="form-group" id="Whoisprovidingthisnotice"
-						style="display: none;">
-						<label for="who">Who is providing this notice?</label> 
-						<textarea class="form-control" name="whoprovidenotice" row="4">${whoprovidenotice}</textarea>
-					</div>
+					
 					<div class="form-group">
 						<label for="who">How do you protect user's personal
 							information?</label>
@@ -807,139 +869,150 @@
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="use your credit or debit card"
-								name="useyourcreditordebitcard" ${useyourcreditordebitcard}>use your credit or debit
-								card
+								name="useyourcreditordebitcard" ${useyourcreditordebitcard}>use
+								your credit or debit card
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="seek financial or tax advice"
-								name="seekfinancialortaxadvice" ${seekfinancialortaxadvice}>seek financial or tax
-								advice
+								name="seekfinancialortaxadvice" ${seekfinancialortaxadvice}>seek
+								financial or tax advice
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="apply for insurance" name="applyforinsurance" ${applyforinsurance}>apply
-								for insurance
+								value="apply for insurance" name="applyforinsurance"
+								${applyforinsurance}>apply for insurance
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="pay insurance premiums" name="payinsurancepremiums" ${payinsurancepremiums}>pay
-								insurance premiums
+								value="pay insurance premiums" name="payinsurancepremiums"
+								${payinsurancepremiums}>pay insurance premiums
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="file an insurance claim" name="fileaninsuranceclaim" ${fileaninsuranceclaim}>file
-								an insurance claim
+								value="file an insurance claim" name="fileaninsuranceclaim"
+								${fileaninsuranceclaim}>file an insurance claim
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="seek advice about your investments"
-								name="seekadviceaboutyourinvestments" ${seekadviceaboutyourinvestments}>seek advice about
-								your investments
+								name="seekadviceaboutyourinvestments"
+								${seekadviceaboutyourinvestments}>seek advice about your
+								investments
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="buy securities from us" name="buysecuritiesfromus" ${buysecuritiesfromus}>buy
-								securities from us
+								value="buy securities from us" name="buysecuritiesfromus"
+								${buysecuritiesfromus}>buy securities from us
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="sell securities to us" name="sellsecuritiestous" ${sellsecuritiestous}>sell
-								securities to us
+								value="sell securities to us" name="sellsecuritiestous"
+								${sellsecuritiestous}>sell securities to us
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="direct us to buy securities"
-								name="directustobuysecurities" ${directustobuysecurities}>direct us to buy
-								securities
+								name="directustobuysecurities" ${directustobuysecurities}>direct
+								us to buy securities
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="direct us to sell your securities"
-								name="directustosellyoursecurities" ${directustosellyoursecurities}>direct us to sell
-								your securities
+								name="directustosellyoursecurities"
+								${directustosellyoursecurities}>direct us to sell your
+								securities
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="make deposits or withdrawals from your account"
-								name="makedepositsorwithdrawalsfromyouraccount" ${makedepositsorwithdrawalsfromyouraccount}>make
+								name="makedepositsorwithdrawalsfromyouraccount"
+								${makedepositsorwithdrawalsfromyouraccount}>make
 								deposits or withdrawals from your account
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="enter into an investment advisory contract"
-								name="enterintoaninvestmentadvisorycontract" ${enterintoaninvestmentadvisorycontract}>enter into
-								an investment advisory contract
+								name="enterintoaninvestmentadvisorycontract"
+								${enterintoaninvestmentadvisorycontract}>enter into an
+								investment advisory contract
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="give us your income information"
-								name="giveusyourincomeinformation" ${giveusyourincomeinformation}>give us your income
+								name="giveusyourincomeinformation"
+								${giveusyourincomeinformation}>give us your income
 								information
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="provide employment information"
-								name="provideemploymentinformation" ${provideemploymentinformation}>provide employment
+								name="provideemploymentinformation"
+								${provideemploymentinformation}>provide employment
 								information
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="give us your employment history"
-								name="giveusyouremploymenthistory" ${giveusyouremploymenthistory}>give us your
-								employment history
+								name="giveusyouremploymenthistory"
+								${giveusyouremploymenthistory}>give us your employment
+								history
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="tell us about your investment or retirement portfolio"
-								name="tellusaboutyourinvestmentorretirementportfolio" ${tellusaboutyourinvestmentorretirementportfolio}>tell
+								name="tellusaboutyourinvestmentorretirementportfolio"
+								${tellusaboutyourinvestmentorretirementportfolio}>tell
 								us about your investment or retirement portfolio
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="tell us about your investment or retirement earnings"
-								name="tellusaboutyourinvestmentorretirementearnings" ${tellusaboutyourinvestmentorretirementearnings}>tell
-								us about your investment or retirement earnings
+								name="tellusaboutyourinvestmentorretirementearnings"
+								${tellusaboutyourinvestmentorretirementearnings}>tell us
+								about your investment or retirement earnings
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="apply for financing" name="applyforfinancing" ${applyforfinancing}>apply
-								for financing
+								value="apply for financing" name="applyforfinancing"
+								${applyforfinancing}>apply for financing
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox" value="apply for a lease"
-								name="applyforalease" ${applyforalease}>apply for a lease
+								name="applyforalease" ${applyforalease}>apply for a
+								lease
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="provide account information"
-								name="provideaccountinformation" ${provideaccountinformation}>provide account
-								information
+								name="provideaccountinformation" ${provideaccountinformation}>provide
+								account information
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="give us your contact information"
-								name="giveusyourcontactinformation" ${giveusyourcontactinformation}>give us your contact
+								name="giveusyourcontactinformation"
+								${giveusyourcontactinformation}>give us your contact
 								information
 							</label>
 						</div>
@@ -951,56 +1024,59 @@
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="give us your wage statements"
-								name="giveusyourwagestatements" ${giveusyourwagestatements}>give us your wage
-								statements
+								name="giveusyourwagestatements" ${giveusyourwagestatements}>give
+								us your wage statements
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="provide your mortgage information"
-								name="provideyourmortgageinformation" ${provideyourmortgageinformation}>provide your
-								mortgage information
+								name="provideyourmortgageinformation"
+								${provideyourmortgageinformation}>provide your mortgage
+								information
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
-								value="make a wire transfer" name="makeawiretransfer" ${makeawiretransfer}>make
-								a wire transfer
+								value="make a wire transfer" name="makeawiretransfer"
+								${makeawiretransfer}>make a wire transfer
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="tell us who receives the money"
-								name="telluswhoreceivesthemoney" ${telluswhoreceivesthemoney}>tell us who receives
-								the money
+								name="telluswhoreceivesthemoney" ${telluswhoreceivesthemoney}>tell
+								us who receives the money
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="tell us where to send the money"
-								name="telluswheretosendthemoney" ${telluswheretosendthemoney}>tell us where to send
-								the money
+								name="telluswheretosendthemoney" ${telluswheretosendthemoney}>tell
+								us where to send the money
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="show your government-issued ID"
-								name="showyourgovernment-issuedID" ${showyourgovernment-issuedID}>show your
+								name="showyourgovernment-issuedID"
+								${showyourgovernment-issuedID}>show your
 								government-issued ID
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="show your driver’s license"
-								name="showyourdriver’slicense" ${shouyourdriverslicense}>show your driver's
-								license
+								name="showyourdriver’slicense" ${shouyourdriverslicense}>show
+								your driver's license
 							</label>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox"
 								value="order a commodity futures or option trade"
-								name="orderacommodityfuturesoroptiontrade" ${orderacommodityfuturesoroptiontrade}>order a
-								commodity futures or option trade
+								name="orderacommodityfuturesoroptiontrade"
+								${orderacommodityfuturesoroptiontrade}>order a commodity
+								futures or option trade
 							</label>
 						</div>
 
@@ -1011,30 +1087,23 @@
 							<div class="radio">
 								<label> <input type="radio"
 									name="AffiliatesandCreditBureaus"
-									id="AffiliatesandCreditBureaus" value="yes" ${AffiliatesandCreditBureausY}> Yes
+									id="AffiliatesandCreditBureaus" value="yes"
+									${AffiliatesandCreditBureausY}> Yes
 								</label>
 							</div>
 							<div class="radio">
 								<label> <input type="radio"
 									name="AffiliatesandCreditBureaus"
-									id="AffiliatesandCreditBureaus" value="no" ${AffiliatesandCreditBureausN}> No
+									id="AffiliatesandCreditBureaus" value="no"
+									${AffiliatesandCreditBureausN}> No
 								</label>
+								<input
+								type="hidden" id="hidden_AffiliatesandCreditBureaus"
+								value="${AffiliatesandCreditBureausN}">
 							</div>
 						</div>
-						<script>
-							$("input[name='AffiliatesandCreditBureaus']")
-									.change(function() {
+					
 
-										if ($(this).val() == "yes") {
-											$("#Shareinfowithcompany").hide();
-										} else {
-											$("#Shareinfowithcompany").show();
-										}
-
-									});
-						</script>
-						
-						
 						<div class="form-group" id="Shareinfowithcompany"
 							style="display: none;">
 							<label for="exampleInputPassword1">Do you collect
@@ -1050,6 +1119,22 @@
 								</label>
 							</div>
 						</div>
+						
+						<script>
+							if ($("#hidden_AffiliatesandCreditBureaus").val() == "checked") {
+								$("#Shareinfowithcompany").show();
+							}
+							$("input[name='AffiliatesandCreditBureaus']")
+									.change(function() {
+
+										if ($(this).val() == "yes") {
+											$("#Shareinfowithcompany").hide();
+										} else {
+											$("#Shareinfowithcompany").show();
+										}
+
+									});
+						</script>
 
 
 
@@ -1058,68 +1143,83 @@
 								law previous in "Other important information" section?</label>
 							<div class="radio">
 								<label> <input type="radio" name="desotherimportinfo"
-									id="optionsRadios1" value=yes ${desotherimportinfoY}> Yes
+									id="optionsRadios1" value=yes ${desotherimportinfoY}>
+									Yes
 								</label>
 							</div>
 							<div class="radio">
 								<label> <input type="radio" name="desotherimportinfo"
-									id="optionsRadios2" value="no" ${desotherimportinfoN}> No
+									id="optionsRadios2" value="no" ${desotherimportinfoN}>
+									No
 								</label>
 							</div>
 						</div>
-						
-						
+
+
 						<div class="form-group">
-							<label for="exampleInputPassword1">Do you provide opt-out form</label>
+							<label for="exampleInputPassword1">Do you provide opt-out
+								form</label>
 							<div class="radio">
-								<label> <input type="radio"
-									name="provideoptoutform"
-									id="provideoptoutform" value="yes" ${provideoptoutformY}> Yes
+								<label> <input type="radio" name="provideoptoutform"
+									id="provideoptoutform" value="yes" ${provideoptoutformY}>
+									Yes
 								</label>
 							</div>
 							<div class="radio">
-								<label> <input type="radio"
-									name="provideoptoutform"
-									id="provideoptoutform" value="no" ${provideoptoutformN}> No
+								<label> <input type="radio" name="provideoptoutform"
+									id="provideoptoutform" value="no" ${provideoptoutformN}>
+									No
 								</label>
 							</div>
+							<input
+								type="hidden" id="hidden_provideoptoutform"
+								value="${provideoptoutformY}">
 						</div>
 						<script>
+							if ($("#hidden_provideoptoutform").val() == "checked") {
+								$("#whathappenlimitsharing").show();
+							}
 							$("input[name='provideoptoutform']")
-									.change(function() {
+									.change(
+											function() {
 
-										if ($(this).val() == "no") {
-											$("#whathappenlimitsharing").hide();
-										} else {
-											$("#whathappenlimitsharing").show();
-										}
+												if ($(this).val() == "no") {
+													$("#whathappenlimitsharing")
+															.hide();
+												} else {
+													$("#whathappenlimitsharing")
+															.show();
+												}
 
-									});
+											});
 						</script>
-						
 
-						<div class="form-group" id="whathappenlimitsharing" style="display:none">
+
+						<div class="form-group" id="whathappenlimitsharing"
+							style="display: none">
 							<label for="why">What happens when users limit sharing
 								for an account that is jointly held with someone else?</label>
 							<div class="radio">
-								<label> <input type="radio" name="whathappenlimitsharing"
-									id="optionsRadios1" value="Your
-									choices apply to everyone on the account"> Your
-									choices apply to everyone on the account
+								<label> <input type="radio"
+									name="whathappenlimitsharing" id="optionsRadios1"
+									value="Your
+									choices apply to everyone on the account">
+									Your choices apply to everyone on the account
 								</label>
 							</div>
 							<div class="radio">
-								<label> <input type="radio" name="whathappenlimitsharing"
-									id="optionsRadios2" value="Your choices will
-									apply to everyone on the account - unless you tell us otherwise"> Your choices will
-									apply to everyone on the account - unless you tell us otherwise
+								<label> <input type="radio"
+									name="whathappenlimitsharing" id="optionsRadios2"
+									value="Your choices will
+									apply to everyone on the account - unless you tell us otherwise">
+									Your choices will apply to everyone on the account - unless you
+									tell us otherwise
 								</label>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="exampleInputEmail1"> Provide information
-								about state laws below</label>
+							Provide information about state laws below
 							<textarea class="form-control" name="statelawsbelow" rows="10">${statelawsbelow}</textarea>
 						</div>
 
