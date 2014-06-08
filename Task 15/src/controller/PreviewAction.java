@@ -69,6 +69,47 @@ public class PreviewAction extends Action {
 			}
 			
 			
+			/**
+			 * Share information table
+			 * */
+			
+			if (hp.get("EverydayBusiness") != null && hp.get("EverydayBusiness").equals("No")) {
+				hp.put("EverydayBusiness_limit", "We do not share");
+			}
+			
+			if (hp.get("marketpurpose") != null && hp.get("marketpurpose").equals("No")) {
+				hp.put("marketpurpose_limit", "We do not share");
+			}
+			
+			if (hp.get("jointmarket") != null && hp.get("jointmarket").equals("No")) {
+				hp.put("jointmarket_limit", "We do not share");
+			}
+			
+			if (hp.get("affeverydaybusi") != null && hp.get("affeverydaybusi").equals("No")) {
+				hp.put("affeverydaybusi_limit", "We do not share");
+			}
+			
+			if (hp.get("creditworth") != null && hp.get("creditworth").equals("No")) {
+				hp.put("creditworth_limit", "We do not share");
+			}
+			
+			if (hp.get("creditworth") != null && hp.get("creditworth").equals("Yes")) {
+				hp.put("creditworth_limit", "Yes");
+			}
+
+			
+			if (hp.get("afftomarket") != null && hp.get("afftomarket").equals("No")) {
+				hp.put("afftomarket_limit", "We do not share");
+			}
+			
+			if (hp.get("nonafftomarket") != null && hp.get("nonafftomarket").equals("No")) {
+				hp.put("nonafftomarket_limit", "We do not share");
+			}
+			
+			
+			/**
+			 *  Definition table
+			 * */
 			
 			if (hp.get("desotherimportinfo") != null && hp.get("desotherimportinfo").equals("no") ) {
 				hp.put("desotherimportinfo", "");
@@ -77,7 +118,7 @@ public class PreviewAction extends Action {
 			}
 			
 			if (hp.get("haveaffiliate") != null && hp.get("haveaffiliate").equals("no")) {
-				hp.put("whoareyouraffiliates", "has no affiliates");
+				hp.put("whoareyouraffiliates", hp.get("nameofinstitution") + " has no affiliates");
 			} else if (hp.get("haveaffiliate") != null && hp.get("sharepersonalinfo") != null 
 					&& hp.get("haveaffiliate").equals("yes") && hp.get("sharepersonalinfo").equals("no")) {
 				String whoareyouraffiliates = hp.get("nameofinstitution") + " does not share with our affiliates";
@@ -151,7 +192,6 @@ public class PreviewAction extends Action {
 				ht.setContent(key, hp.get(key));
 			}
 			
-			//ht.setContent("nameofinstitution", hp.get("nameofinstitution"));
 			ht.makeHtmlByDoc(userid + "output.html");
 		} catch (IOException e) {
 			e.printStackTrace();

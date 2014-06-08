@@ -36,6 +36,7 @@ public class Html {
 			return;
 		}
 		Element element = doc.getElementById(id);
+		
 		if (element == null) {
 			return;
 		}
