@@ -214,6 +214,21 @@ public class PreviewAction extends Action {
 				hp.put("statelawsbelow_div", "");
 			}
 			
+			/**
+			 *  Three includes
+			 * */
+			
+			if (hp.get("whoareyouraffiliates") != null) {
+				hp.put("whoareyouraffiliates", "Our affiliates include" + hp.get("whoareyouraffiliates"));
+			}
+			
+			if (hp.get("whoareyournonaffiliates") != null) {
+				hp.put("whoareyournonaffiliates", "Nonaffiliates we share with can include"+hp.get("whoareyournonaffiliates"));
+			}
+			
+			if (hp.get("whoareyourmarketingpartners") != null) {
+				hp.put("whoareyourmarketingpartners", "Our joint marketing partners include"+hp.get("whoareyourmarketingpartners"));
+			}
 			
 			/**
 			 * Set content

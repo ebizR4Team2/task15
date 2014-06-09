@@ -811,7 +811,7 @@
 						<label for="exampleInputPassword1">Who are your
 							affiliates?</label>
 						<textarea class="form-control" rows="3"
-							name="whoareyouraffiliates">${whoareyouraffiliates}</textarea>
+							name="whoareyouraffiliates" placeholder="Our affiliates include...">${whoareyouraffiliates}</textarea>
 					</div>
 
 					<script>
@@ -854,7 +854,7 @@
 						<label for="exampleInputPassword1">Who are your
 							non-affiliates?</label>
 						<textarea class="form-control" rows="3"
-							name="whoareyournonaffiliates">${whoareyournonaffiliates}</textarea>
+							name="whoareyournonaffiliates" placeholder="Nonaffiliates we share with can include...">${whoareyournonaffiliates}</textarea>
 					</div>
 
 					<script>
@@ -896,7 +896,7 @@
 						<label for="exampleInputPassword1">Who are your joint
 							marketing partners?</label>
 						<textarea class="form-control" rows="3"
-							name="whoareyourmarketingpartners">${whoareyourmarketingpartners}</textarea>
+							name="whoareyourmarketingpartners" placeholder="Our joint marketing partners include...">${whoareyourmarketingpartners}</textarea>
 					</div>
 
 					<script>
