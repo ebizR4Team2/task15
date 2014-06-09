@@ -1,3 +1,10 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * Html parser for developer
+ */
+
 package parser;
 
 import java.io.File;
@@ -13,7 +20,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Html {
-	// http://www.oschina.net/p/jsoup
 	private Document doc;
 	private Elements elements;
 	private static String filePath;

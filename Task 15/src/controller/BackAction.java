@@ -1,3 +1,11 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * The action of "back to edit"
+ * Import the temp xml file in server and refill the page
+ */
+
 package controller;
 
 import java.awt.Checkbox;

@@ -1,3 +1,10 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * The action of "download"
+ * Send the zip file containing the html, css and xml file the user needed
+ */
 package controller;
 
 import java.io.File;

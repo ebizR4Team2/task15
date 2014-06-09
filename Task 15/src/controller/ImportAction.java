@@ -1,6 +1,13 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * The action of "import"
+ * Read the xml file in server and fill the index.jsp page
+ */
+
 package controller;
 
-import java.awt.Checkbox;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;

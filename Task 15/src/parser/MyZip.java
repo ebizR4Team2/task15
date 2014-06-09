@@ -1,3 +1,10 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * Zip parser for developer
+ */
+
 package parser;
 
 import java.io.File;

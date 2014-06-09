@@ -1,3 +1,10 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * Xml parser for developer
+ */
+
 package parser;
 
 import java.io.ByteArrayInputStream;
@@ -73,7 +80,14 @@ public class XmlParser {
 		return valueMap;
 	}
 	
-	
+	/**
+	 * Read a file and parse all the node into a HashMap accroding to the xml node and value pair
+	 * @param file
+	 * @return
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
 	public HashMap<String, String> importXml(FileProperty file) throws ParserConfigurationException, SAXException, IOException {
 		InputStream is = new ByteArrayInputStream(file.getBytes());
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -97,7 +111,6 @@ public class XmlParser {
 	}
 	
 	/**
-	 * HAVENT't been tested (6/4/2014 18:56 Fang)
 	 * save xml file into server according to the content of the request and return the path of xml generated in server;
 	 * you need to set the attributes<String, String> in related actions
 	 * @param request contains the value of user entered
