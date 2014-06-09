@@ -123,8 +123,17 @@ public class PreviewAction extends Action {
 				hp.put("afftomarket_limit", "We do not share");
 			}
 			
+			if (hp.get("afftomarket") != null && hp.get("afftomarket").equals("Yes")) {
+				hp.put("afftomarket_limit", "Yes");
+			}
+			
+			
 			if (hp.get("nonafftomarket") != null && hp.get("nonafftomarket").equals("No")) {
 				hp.put("nonafftomarket_limit", "We do not share");
+			}
+			
+			if (hp.get("nonafftomarket") != null && hp.get("nonafftomarket").equals("Yes")) {
+				hp.put("nonafftomarket_limit", "Yes");
 			}
 			
 			

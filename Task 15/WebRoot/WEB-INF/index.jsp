@@ -595,7 +595,8 @@
 									</div>
 									<div id="wedonotshare5Yes" style="display: none">
 										<span>Yes</span>
-									</div> <script>
+									</div> 
+									<script>
 										if ($("#hidden_creditworth").val() == "checked") {
 											$("#wedonotshare5").hide();
 											$("#wedonotshare5Yes").show();
@@ -678,19 +679,9 @@
 
 								<td>
 									<div id="afftomarket_limit_div">
-										<div class="radio">
-											<label> <input type="radio" name="afftomarket_limit"
-												id="optionsRadios1" value="Yes" ${afftomarket_limitY}>
-												Yes
-											</label>
-											
-										</div>
-										<div class="radio">
-											<label> <input type="radio" name="afftomarket_limit"
-												id="optionsRadios2" value="No" ${afftomarket_limitN}>
-												No
-											</label>
-										</div>
+										<div id="wedonotshare6Yes" style="display: none">
+											<span>Yes</span>
+										</div> 
 										<input type="hidden" id="hidden_afftomarket_limit"
 											value="${afftomarket_limitY}"> <input type="hidden"
 											id="hidden_afftomarket_limitN" value="${afftomarket_limitN}">
@@ -719,6 +710,7 @@
 																$(
 																		"#afftomarket_limit_div")
 																		.hide();
+																
 															} else {
 																$(
 																		"#wedonotshare6")
@@ -726,6 +718,7 @@
 																$(
 																		"#afftomarket_limit_div")
 																		.show();
+																$("#wedonotshare6Yes").show();
 															}
 
 														});
@@ -752,20 +745,9 @@
 								</td>
 								<td>
 									<div id="nonafftomarket_limit_div">
-										<div class="radio">
-											<label> <input type="radio"
-												name="nonafftomarket_limit" id="optionsRadios1" value="Yes"
-												${nonafftomarket_limitY}> Yes
-											</label>
-											<input type="hidden" id="hidden_nonafftomarket_limitY" 
-											value="${nonafftomarket_limitY}">
-											</div>
-										<div class="radio">
-											<label> <input type="radio"
-												name="nonafftomarket_limit" id="optionsRadios2" value="No"
-												${nonafftomarket_limitN}> No
-											</label>
-										</div>
+													<div id="wedonotshare7Yes" style="display: none">
+											<span>Yes</span>
+										</div> 
 									</div>
 									<div id="wedonotshare7" style="display: none">
 										<span>You do not share</span>
@@ -803,6 +785,7 @@
 																$(
 																		"#nonafftomarket_limit_div")
 																		.show();
+																$("#wedonotshare7Yes").show();
 															}
 
 														});
@@ -1445,7 +1428,7 @@
 								}
 							});
 
-							$("input[name='afftomarket_limit']")
+							$("input[name='afftomarket']")
 									.change(
 											function() {
 												if ($(this).val() == "no") {
@@ -1460,7 +1443,7 @@
 												}
 											});
 
-							$("input[name='nonafftomarket_limit']")
+							$("input[name='nonafftomarket']")
 									.change(
 											function() {
 												if ($(this).val() == "no") {
