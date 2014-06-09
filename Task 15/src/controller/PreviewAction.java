@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -47,6 +48,7 @@ public class PreviewAction extends Action {
 			e.printStackTrace();
 		}
 		
+		
 		System.out.println(hp.size());
 		
 		StringBuffer filePath = request.getRequestURL();
@@ -63,6 +65,48 @@ public class PreviewAction extends Action {
 			Html ht = new Html("PrivacyPolicyHtml.html", request);
 			Html ht2 = new Html("PrivacyPolicyOptout_online.html", request);
 
+			
+			/**
+			 * validate
+			 * 
+			 * */
+			
+			HashSet<String> checkBox = new HashSet<String>();
+			checkBox.add("income");
+			checkBox.add("accountbalances");
+			checkBox.add("paymenthistory");
+			checkBox.add("transactionhistory");
+			checkBox.add("transactionorlosshistory");
+			checkBox.add("credithistory");
+			checkBox.add("creditscores");
+			checkBox.add("assets");
+			checkBox.add("investmentexperience");
+			checkBox.add("credit-basedinsurancescores");
+			checkBox.add("insuranceclaimhistory");
+			checkBox.add("medicalinformation");
+			checkBox.add("overdrafthistory");
+			checkBox.add("purchasehistory");
+			checkBox.add("accounttransactions");
+			checkBox.add("risktolerance");
+			checkBox.add("medical-relateddebts");
+			checkBox.add("creditcardorotherdebt");
+			checkBox.add("mortgageratesandpayments");
+			checkBox.add("retirementassets");
+			checkBox.add("checkingaccountinformation");
+			checkBox.add("employmentinformation");
+			checkBox.add("wiretransferinstructions");
+			int count = 0;
+			
+			for (String s: checkBox) {
+				if (hp.get(s) != null) {
+					count++;
+				}
+			}
+			if (count < 5) {
+				request.setAttribute("validatepersoninfo", "Please select five or more");	
+				return "index.do";
+			}
+			
 			
 			if(hp.get("nameofinstitution") != null) {
 				for (int i = 1; i <= 4; i++) {

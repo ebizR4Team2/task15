@@ -77,7 +77,8 @@
 						information you collect and share? (Choose minimum of 5)</label>
 						  <img src="" id="place-holder-7" />
 						</a>
-
+						<br>
+					<span style="color:red">${validatepersoninfo}</span>
 					<div class="checkbox">
 						<label> <input type="checkbox"
 							value="social security number" name="socialsecuritynumber"

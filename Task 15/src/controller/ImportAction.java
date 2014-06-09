@@ -57,6 +57,7 @@ public class ImportAction extends Action {
 		checkBox.add("checkingaccountinformation");
 		checkBox.add("employmentinformation");
 		checkBox.add("wiretransferinstructions");
+		
 		checkBox.add("openanaccount");
 		checkBox.add("depositmoney");
 		checkBox.add("payyourbills");

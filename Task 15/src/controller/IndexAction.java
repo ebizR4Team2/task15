@@ -29,6 +29,7 @@ public class IndexAction extends Action {
 			userid++;
 			session.setAttribute("userid", Long.toString(userid));
 		}
+		
 		return "index.jsp";
 	}
 }
