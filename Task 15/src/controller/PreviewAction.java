@@ -174,10 +174,18 @@ public class PreviewAction extends Action {
 			 * display what kinds of opt-out form
 			 * */
 			
-			if (hp.get("opt-out-mail") == null) {
+			if (hp.get("optoutmail") == null) {
 				hp.put("provideoptoutform", "");
 			} else if(hp.get("provideoptoutform") != null && hp.get("provideoptoutform").equals("mail")){
 				hp.remove("provideoptoutform");
+			}
+			
+			if (hp.get("optoutonline") == null) {
+				hp.put("opt_visitonline", "");
+			} 
+			
+			if (hp.get("optoutphone") == null) {
+				hp.put("opt_callphone", "");
 			}
 			
 			if (hp.get("additionalinfoacct") != null && hp.get("additionalinfoacct").equals("yes")) {
