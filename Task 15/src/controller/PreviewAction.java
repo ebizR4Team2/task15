@@ -1,18 +1,22 @@
+/**
+ * Task 15 Privacy Policy
+ * @author Team2 CMU ebiz Team2 Hao Ge, Harini Ramasatagopan, Yujia Hu, Fang Meng, Sk Md Abdullah Al Subail
+ * 
+ * The action of "preview"
+ * Save the xml in server and produce html file for preview
+ */
+
 package controller;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.taglibs.standard.lang.jstl.NullLiteral;
 
 import parser.Html;
 import parser.MyZip;

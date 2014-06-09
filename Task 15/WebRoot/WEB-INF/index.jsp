@@ -1311,17 +1311,17 @@
 
 							<div class="checkbox">
 								<label> <input type="checkbox" value="mail"
-									name="opt-out-mail" ${opt-out-mail}>mail
+									name="optoutmail" ${optoutmail}>mail
 								</label>
 							</div>
 							<div class="checkbox">
 								<label> <input type="checkbox" value="online"
-									name="opt-out-online" ${opt-out-online}>online
+									name="optoutonline" ${optoutonline}>online
 								</label>
 							</div>
 							<div class="checkbox">
 								<label> <input type="checkbox" value="phone"
-									name="opt-out-phone" ${opt-out-phone}>phone
+									name="optoutphone" ${optoutphone}>phone
 								</label>
 							</div>
 						</div>
@@ -1344,17 +1344,18 @@
 
 						<script>
 						
-						if ($("#hidden_nonafftomarket_limitY").val() == "checked"
+						if ($("#hidden_EverydayBusiness_limit").val() == "checked"
 								|| $("#hidden_marketpurpose_limit").val() == "checked"
 								|| $("#hidden_jointmarket_limit").val() == "checked"
 								|| $("#hidden_affeverydaybusi_limit").val() == "checked"
 								|| $("#hidden_creditworth").val() == "checked"
-								|| $("#hidden_afftomarket_limit").val() == "checked"
-								|| $("#hidden_nonafftomarket_limitY").val() == "checked") {
+								|| $("#hidden_afftomarket").val() == "checked"
+								|| $("#hidden_nonafftomarket").val() == "checked") {
 							$("#whathappenlimitsharing").show();
 							$("#opt-out-types").show();
 							$("#additionalinfoacct").show();
 						}
+						
 						
 							$("input[name='EverydayBusiness_limit']")
 									.change(

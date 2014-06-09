@@ -89,10 +89,9 @@ public class ImportAction extends Action {
 		checkBox.add("showyourgovernment-issuedID");
 		checkBox.add("shouyourdriverslicense");
 		checkBox.add("orderacommodityfuturesoroptiontrade");
-		checkBox.add("opt-out-mail");
-		checkBox.add("opt-out-online");
-		checkBox.add("opt-out-phone");
-		
+		checkBox.add("optoutmail");
+		checkBox.add("optoutonline");
+		checkBox.add("optoutphone");
 	}
 	
 	@Override
