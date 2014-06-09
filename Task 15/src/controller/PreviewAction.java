@@ -87,7 +87,7 @@ public class PreviewAction extends Action {
 			
 			
 			ht.generateLink("optoutonlineform", userid + "PrivacyPolicyOptout_online.html", "opt out form");
-			ht.generateLink("optoutonlineform1", userid + "PrivacyPolicyOptout_online.html", "opt out form");
+			//ht.generateLink("optoutonlineform1", userid + "PrivacyPolicyOptout_online.html", "opt out form");
 			
 			
 			/**
@@ -228,6 +228,10 @@ public class PreviewAction extends Action {
 			
 			if (hp.get("whoareyourmarketingpartners") != null) {
 				hp.put("whoareyourmarketingpartners", "Our joint marketing partners include"+hp.get("whoareyourmarketingpartners"));
+			}
+			
+			if (hp.get("websiteDomainName") != null) {
+				hp.put("websiteDomainName"," or go to" + hp.get("websiteDomainName"));
 			}
 			
 			/**
