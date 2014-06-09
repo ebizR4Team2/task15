@@ -23,10 +23,17 @@
 		<div class="content">
 			<form role="form" method="post" action="preview.do">
 				<div class="form-group">
-					<label for="nameofinstitution">Enter the name of financial
-						institution</label> <input type="text" class="form-control"
+				<a href="https://linkpeek.com"
+				  onmouseover="document.getElementById('place-holder-1').src='https://farm6.staticflickr.com/5571/14377325532_4f2cd98d5d_o.png';"
+				  onmouseout="document.getElementById('place-holder-1').src='';"><label for="nameofinstitution">Enter the name of financial
+						institution (Hover the question to see instruction)</label>
+				  <img src="" id="place-holder-1" />
+				</a>
+					 <input type="text" class="form-control"
 						name="nameofinstitution" value="${nameofinstitution}">
 				</div>
+				
+				
 				<div class="form-group">
 					<label for="nameofinstitution">Enter the address of
 						financial institution</label> <input type="text" class="form-control"
@@ -39,8 +46,13 @@
 				</div>
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Enter your customer service
-						phone number</label> <input type="tel" class="form-control"
+				<a href="https://linkpeek.com"
+				  onmouseover="document.getElementById('place-holder-5').src='https://farm3.staticflickr.com/2924/14375433771_e11d2b50f6_b.jpg';"
+				  onmouseout="document.getElementById('place-holder-5').src='';">
+				<label>Enter your customer service phone number</label>
+				  <img src="" id="place-holder-5" />
+				</a>
+					 <input type="tel" class="form-control"
 						id="exampleInputEmail1" name="phoneNumber" value="${phoneNumber}">
 				</div>
 
@@ -58,8 +70,13 @@
 				</div>
 
 				<div class="form-group">
+					<a href="https://linkpeek.com"
+						  onmouseover="document.getElementById('place-holder-7').src='https://farm6.staticflickr.com/5523/14355678936_2d7d673554_b.jpg';"
+						  onmouseout="document.getElementById('place-holder-7').src='';">
 					<label for="typeofpersonalinfo">What types of personal
 						information you collect and share? (Choose minimum of 5)</label>
+						  <img src="" id="place-holder-7" />
+						</a>
 
 					<div class="checkbox">
 						<label> <input type="checkbox"
@@ -242,7 +259,12 @@
 					<table class="table table-bordered">
 						<thead>
 							<tr>
-								<th>Reasons you can share your customer's information</th>
+								<th><a href="https://linkpeek.com"
+							  onmouseover="document.getElementById('place-holder-3').src='https://farm3.staticflickr.com/2932/14192129109_fc0a343a5d_n.jpg';"
+							  onmouseout="document.getElementById('place-holder-3').src='';">
+							  Reasons you can share your customer's information
+							  <img src="" id="place-holder-3" />
+							</a></th>
 								<th>Do you share?</th>
 								<th>Can customer limit this sharing?</th>
 							</tr>
@@ -1252,25 +1274,6 @@
 									});
 						</script>
 
-
-
-						<div class="form-group">
-							<label for="why">Are you going to describe state privacy
-								law previous in "Other important information" section?</label>
-							<div class="radio">
-								<label> <input type="radio" name="desotherimportinfo"
-									id="optionsRadios1" value=yes ${desotherimportinfoY}>
-									Yes
-								</label>
-							</div>
-							<div class="radio">
-								<label> <input type="radio" name="desotherimportinfo"
-									id="optionsRadios2" value="no" ${desotherimportinfoN}>
-									No
-								</label>
-							</div>
-						</div>
-
 						<!-- 
 						<div class="form-group">
 							<label for="exampleInputPassword1">Do you provide opt-out
@@ -1315,8 +1318,13 @@
 						</div>
 
 						<div class="form-group" id="opt-out-types" style="display: none">
+							<a href="https://linkpeek.com"
+							  onmouseover="document.getElementById('place-holder-4').src='https://farm4.staticflickr.com/3862/14378773765_6eb4ccfe03_b.jpg';"
+							  onmouseout="document.getElementById('place-holder-4').src='';">
 							<label>What types of opt-out do you want to
 								provide?(choose at least 1)</label>
+							  <img src="" id="place-holder-4" />
+							</a>
 
 							<div class="checkbox">
 								<label> <input type="checkbox" value="mail"
@@ -1469,12 +1477,57 @@
 						</script>
 
 
-
-
 						<div class="form-group">
-							Provide information about state laws below
-							<textarea class="form-control" name="statelawsbelow" rows="10">${statelawsbelow}</textarea>
+							<a href="https://linkpeek.com"
+							  onmouseover="document.getElementById('place-holder-2').src='https://farm4.staticflickr.com/3854/14192129189_61244cb04b_o.png';"
+							  onmouseout="document.getElementById('place-holder-2').src='';">
+							<label for="why">Are you going to describe state privacy
+								law previous in "Other important information" section?</label>
+							  <img src="" id="place-holder-2" />
+							</a>
+							<div class="radio">
+								<label> <input type="radio" name="desotherimportinfo"
+									id="optionsRadios1" value=yes ${desotherimportinfoY}>
+									Yes
+								</label>
+								<input type="hidden" id="hidden_desotherimportinfo"
+								value="${desotherimportinfoY}">
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="desotherimportinfo"
+									id="optionsRadios2" value="no" ${desotherimportinfoN}>
+									No
+								</label>
+							</div>
 						</div>
+
+						<div class="form-group"  id="statelawsbelow" style="display: none">
+						
+							<a href="https://linkpeek.com"
+							  onmouseover="document.getElementById('place-holder-6').src='https://farm6.staticflickr.com/5552/14375433791_5c9f0d86f0_b.jpg';"
+							  onmouseout="document.getElementById('place-holder-6').src='';">
+							<label>Provide information about state laws below</label>
+							  <img src="" id="place-holder-6" />
+							</a>
+							<textarea class="form-control" id="statelawsbelow" name="statelawsbelow" rows="10">${statelawsbelow}</textarea>
+							
+						</div>
+						
+						<script>
+						if ($("#hidden_desotherimportinfo").val() == "checked") {
+							$("#statelawsbelow").show();
+						}
+					
+						$("input[name='desotherimportinfo']")
+								.change(
+										function() {
+											if ($(this).val() == "yes") {
+												$("#statelawsbelow").show();
+											} else {
+												$("#statelawsbelow").hide();
+											}
+										});
+						</script>
 
 
 
