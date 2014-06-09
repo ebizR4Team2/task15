@@ -23,7 +23,7 @@
 		<div class="content">
 			<form role="form" method="post" action="preview.do">
 				<div class="form-group">
-				<a href="https://linkpeek.com"
+				<a href="#"
 				  onmouseover="document.getElementById('place-holder-1').src='https://farm6.staticflickr.com/5571/14377325532_4f2cd98d5d_o.png';"
 				  onmouseout="document.getElementById('place-holder-1').src='';"><label for="nameofinstitution">Enter the name of financial
 						institution (Hover the question to see instruction)</label>
@@ -46,7 +46,7 @@
 				</div>
 
 				<div class="form-group">
-				<a href="https://linkpeek.com"
+				<a href="#"
 				  onmouseover="document.getElementById('place-holder-5').src='https://farm3.staticflickr.com/2924/14375433771_e11d2b50f6_b.jpg';"
 				  onmouseout="document.getElementById('place-holder-5').src='';">
 				<label>Enter your customer service phone number</label>
@@ -70,7 +70,7 @@
 				</div>
 
 				<div class="form-group">
-					<a href="https://linkpeek.com"
+					<a href="#"
 						  onmouseover="document.getElementById('place-holder-7').src='https://farm6.staticflickr.com/5523/14355678936_2d7d673554_b.jpg';"
 						  onmouseout="document.getElementById('place-holder-7').src='';">
 					<label for="typeofpersonalinfo">What types of personal
@@ -259,7 +259,7 @@
 					<table class="table table-bordered">
 						<thead>
 							<tr>
-								<th><a href="https://linkpeek.com"
+								<th><a href="#"
 							  onmouseover="document.getElementById('place-holder-3').src='https://farm3.staticflickr.com/2932/14192129109_fc0a343a5d_n.jpg';"
 							  onmouseout="document.getElementById('place-holder-3').src='';">
 							  Reasons you can share your customer's information
@@ -1301,7 +1301,7 @@
 						</div>
 
 						<div class="form-group" id="opt-out-types" style="display: none">
-							<a href="https://linkpeek.com"
+							<a href="#"
 							  onmouseover="document.getElementById('place-holder-4').src='https://farm4.staticflickr.com/3862/14378773765_6eb4ccfe03_b.jpg';"
 							  onmouseout="document.getElementById('place-holder-4').src='';">
 							<label>What types of opt-out do you want to
@@ -1462,7 +1462,7 @@
 
 
 						<div class="form-group">
-							<a href="https://linkpeek.com"
+							<a href="#"
 							  onmouseover="document.getElementById('place-holder-2').src='https://farm4.staticflickr.com/3854/14192129189_61244cb04b_o.png';"
 							  onmouseout="document.getElementById('place-holder-2').src='';">
 							<label for="why">Are you going to describe state privacy
@@ -1487,7 +1487,7 @@
 
 						<div class="form-group"  id="statelawsbelow" style="display: none">
 						
-							<a href="https://linkpeek.com"
+							<a href="#"
 							  onmouseover="document.getElementById('place-holder-6').src='https://farm6.staticflickr.com/5552/14375433791_5c9f0d86f0_b.jpg';"
 							  onmouseout="document.getElementById('place-holder-6').src='';">
 							<label>Provide information about state laws below</label>
